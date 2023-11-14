@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyfme"
+version = "0.0.1"
+dependencies = [
+    "numpy"
+]
+
+authors = [
+  { name="Marc Ridler", email="marc-etienne.ridler@eea.europa.eu" },
+]
+description = "Useful library"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material"]
+test= ["pytest"]
