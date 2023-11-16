@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pyfme"
-version = "0.0.1"
+version = "0.0.4"
 dependencies = [
     "numpy"
 ]
@@ -14,7 +14,7 @@ authors = [
 ]
 description = "Useful library"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
