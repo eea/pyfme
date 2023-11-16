@@ -2,7 +2,7 @@
 import numpy as np
 
 
-class ImportXLSX:
+class Xlsx:
     def __init__(self, name: str, low: float = 0.0, high: float = 1.0) -> None:
         """Create a new Import XLSX class
 
@@ -23,7 +23,7 @@ class ImportXLSX:
         self._low = low
         self._high = high
 
-    def import_xlsx(self, n_samples: int = 1) -> np.ndarray:
+    def read(self, n_samples: int = 1) -> np.ndarray:
         """Sample random numbers
 
         Parameters
