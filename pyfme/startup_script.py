@@ -101,4 +101,4 @@ else:
     sys.path.append(pyfme_directory)
 
 import pandas as pd
-from pyfme import Xlsx
+import pyfme
