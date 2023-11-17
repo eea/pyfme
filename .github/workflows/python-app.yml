@@ -38,3 +38,11 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=pyfme tests --disable-warnings
+
+      - name: Upload packets to FME Server
+        uses: dkershner6/post-api-call-action@v1
+        with:
+          url: "https://fme.discomap.eea.europa.eu/fmerest/v3/resources/connections/FME_SHAREDRESOURCE_DATA/filesys/pyfme"
+          data: '{"command": "publish"}'
+          headers: '{"Authorization": "fmetoken token=${{ secrets.FME_SERVER_UPLOAD_TOKEN }}"}'
+          params: '{"path": "pyfme/test", "createDirectories": "true", "overwrite":"false"}'
