@@ -28,4 +28,4 @@ dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material
 test= ["pytest"]
 
 [tool.ruff.format]
-exclude = ["startup_script.py"]
+exclude = ["pyfme/startup_script.py"]
