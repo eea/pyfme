@@ -27,5 +27,5 @@ classifiers = [
 dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material"]
 test= ["pytest"]
 
-[tool.ruff.format]
-exclude = ["pyfme/startup_script.py"]
+[tool.ruff]
+extend-exclude = ["tests", "pyfme/startup_script.py"]
