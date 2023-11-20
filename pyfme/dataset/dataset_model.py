@@ -1,6 +1,6 @@
 import json
 import requests
-
+from typing import Optional
 from .table import Table
 
 
@@ -35,6 +35,7 @@ class DatasetModel:
         for table in schema["tableSchemas"]:
             self._tables.append(Table(table))
 
+    @property
     def table_names(self) -> list[str]:
         """Returns a list of table names.
 
@@ -43,3 +44,6 @@ class DatasetModel:
 
         """
         return [table.name for table in self._tables]
+
+    def get_table(self, table_name: str) -> Optional[Table]:
+        return next((t for t in self._tables if t.name == table_name), None)

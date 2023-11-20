@@ -27,6 +27,14 @@ class Table:
     def required(self) -> list[str]:
         return [s["name"] for s in self._schema if s["required"]]
 
+    @property
+    def date_columns(self) -> list[str]:
+        return [k for k in self.columns.keys() if self.columns[k] == "DATE"]
+
+    @property
+    def non_date_fields(self) -> dict[str, object]:
+        return dict(filter(lambda kv: kv[1] != "DATE", self.columns.items()))
+
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
         for s in self._schema:
