@@ -1,9 +1,10 @@
+import json
 import requests
+
+from .table import Table
 
 
 class DatasetModel:
-    table_list: list[str]
-
     def __init__(self, base_url: str = "https://sandbox.reportnet.europa.eu") -> None:
         """Create a new DatasetModel class
 
@@ -27,16 +28,18 @@ class DatasetModel:
                 f"Status Code: {request.status_code}. Could not retrieve schema with GET: {endpoint}."
             )
         schema = request.json()
-        self.table_list = self._get_table_names(schema["tableSchemas"])
+        self._read_schema(schema)
 
-    def _get_table_names(tables: list) -> list:
-        """Returns a list of table names from a given list of tables.
+    def _read_schema(self, schema: json):
+        self._tables = []
+        for table in schema["tableSchemas"]:
+            self._tables.append(Table(table))
 
-        Args:
-            tables (list): A list of tables where each table is a dictionary with a "nameTableSchema" key.
+    def table_names(self) -> list[str]:
+        """Returns a list of table names.
 
         Returns:
             A list of table names extracted from the input tables.
 
         """
-        return [table["nameTableSchema"] for table in tables]
+        return [table.name for table in self._tables]

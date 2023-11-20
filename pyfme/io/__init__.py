@@ -1,4 +1,4 @@
 """FME Python Helper Functions"""
-from ._xlsx import Xlsx
+from .xlsx import Xlsx
 
 __all__ = ["Xlsx"]

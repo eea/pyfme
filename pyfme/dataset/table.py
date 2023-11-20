@@ -7,12 +7,11 @@ class Table:
     def __init__(self, table_json: json) -> None:
         """Create a new Table class
 
-        Parameters
-        ----------
-        table_json: jsonb
-            base url (default to sandbox)
+        Args:
+            table_json (json): json object of the table.
+
         """
-        self._schema = table_json
+        self._schema = table_json["recordSchema"]["fieldSchema"]
         self._name = table_json["nameTableSchema"]
         self._column_names_and_type = self._get_column_names_and_type()
 

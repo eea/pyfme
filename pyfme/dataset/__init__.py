@@ -1,4 +1,4 @@
-"""FME Python Helper Functions"""
-from .dataset import DataSet
+from .dataset_model import DatasetModel
+from .table import Table
 
-__all__ = ["Xlsx"]
+__all__ = ["DatasetModel", "Table"]
