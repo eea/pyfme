@@ -20,8 +20,12 @@ class Table:
         return self._name
 
     @property
-    def columns(self) -> dict[str, object]:
+    def column_names_and_type(self) -> dict[str, object]:
         return self._column_names_and_type
+
+    @property
+    def columns(self) -> list[str]:
+        return list(self._column_names_and_type.keys())
 
     @property
     def required(self) -> list[str]:
@@ -29,11 +33,17 @@ class Table:
 
     @property
     def date_columns(self) -> list[str]:
-        return [k for k in self.columns.keys() if self.columns[k] == "DATE"]
+        return [
+            k
+            for k in self.column_names_and_type.keys()
+            if self.column_names_and_type[k] == "DATE"
+        ]
 
     @property
     def non_date_fields(self) -> dict[str, object]:
-        return dict(filter(lambda kv: kv[1] != "DATE", self.columns.items()))
+        return dict(
+            filter(lambda kv: kv[1] != "DATE", self.column_names_and_type.items())
+        )
 
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
@@ -46,7 +56,7 @@ class Table:
                 v = np.float64
             elif v == "NUMBER_INTEGER":
                 v = "Int64"
-            elif v == "DATE":
-                v = datetime
+            # elif v == "DATE":
+            #    v = datetime
             names_and_type[name] = v
         return names_and_type

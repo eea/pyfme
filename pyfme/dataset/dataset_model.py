@@ -1,39 +1,33 @@
 import json
 import requests
-from typing import Optional
+from typing import Optional, Self
 from .table import Table
 
 
 class DatasetModel:
-    def __init__(self, base_url: str = "https://sandbox.reportnet.europa.eu") -> None:
-        """Create a new DatasetModel class
+    def __init__(self) -> None:
+        self._tables = []
 
-        Parameters
-        ----------
-        base_url: str
-            base url (default to sandbox)
+    def from_json(self, json_filepath: str) -> Self:
+        json_data = json.load(open(json_filepath))
+        self._tables = []
+        for table in json_data["tableSchemas"]:
+            self._tables.append(Table(table))
+        return self
 
-        Examples
-        --------
-        >>> sim = DatasetModel(base_url="https://sandbox.reportnet.europa.eu")
-        """
-        self._base_url = base_url.removesuffix(r"/")
-
-    def get(self, dataset_id: str, api_key: str) -> None:
+    def from_url(self, base_url: str, dataset_id: str, api_key: str) -> Self:
         headers = {"Authorization": api_key}
-        endpoint = self._base_url + r"/dataschema/v1/datasetId/" + dataset_id
+        endpoint = base_url + r"/dataschema/v1/datasetId/" + dataset_id
         request = requests.get(endpoint, headers=headers)
         if not request.ok:
             raise Exception(
                 f"Status Code: {request.status_code}. Could not retrieve schema with GET: {endpoint}."
             )
-        schema = request.json()
-        self._read_schema(schema)
-
-    def _read_schema(self, schema: json):
+        json_data = request.json()
         self._tables = []
-        for table in schema["tableSchemas"]:
+        for table in json_data["tableSchemas"]:
             self._tables.append(Table(table))
+        return self
 
     @property
     def table_names(self) -> list[str]:
@@ -44,6 +38,13 @@ class DatasetModel:
 
         """
         return [table.name for table in self._tables]
+
+    def remove_table(self, table_name: str) -> Self:
+        table = self.get_table(table_name=table_name)
+        if table is None:
+            raise ValueError(f"Cannot fine table {table_name} in dataset")
+        self._tables.remove(table)
+        return self
 
     def get_table(self, table_name: str) -> Optional[Table]:
         return next((t for t in self._tables if t.name == table_name), None)
