@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "pyfme"
 version = "0.0.5"
 dependencies = [
-    "numpy", "requests", "pandas", "XlsxWriter", "openpyxl"
+    "numpy", "requests", "pandas", "XlsxWriter", "openpyxl", "typing-extensions"
 ]
 
 authors = [
