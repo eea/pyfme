@@ -1,6 +1,7 @@
 import json
 import requests
-from typing import Optional, Self
+from typing import Optional
+from typing_extensions import Self
 from .table import Table
 
 

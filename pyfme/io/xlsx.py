@@ -1,7 +1,8 @@
 """The simulation module"""
 import pandas as pd
 from ..dataset.dataset_model import DatasetModel
-from typing import Dict, Self
+from typing import Dict
+from typing_extensions import Self
 from zipfile import ZipFile
 
 
