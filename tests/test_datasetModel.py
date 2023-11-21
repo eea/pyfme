@@ -22,6 +22,7 @@ def test_read_json_ok(nitrate_json_file_path):
     assert isinstance(ds.table_names, list)
 
 
+@pytest.mark.skip(reason="Github has not sandbox access")
 def test_read_url_ok():
     ds = DatasetModel()
     ds.from_url(
