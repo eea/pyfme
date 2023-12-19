@@ -7,7 +7,7 @@ from zipfile import ZipFile
 
 
 class Xlsx:
-    def __init__(
+    def from_xlsx(
         self, filename: str, strict=False, datamodel: DatasetModel = None
     ) -> None:
         """Create a new Import XLSX class
@@ -28,7 +28,7 @@ class Xlsx:
         self._data = {}
         self._read(strict=strict)
 
-    def __init__(self, dataset: Dict[str, pd.DataFrame]) -> None:
+    def from_pandas(self, dataset: Dict[str, pd.DataFrame]) -> None:
         """Create a new Import XLSX class with the dataset
 
         Parameters
