@@ -28,6 +28,20 @@ class Xlsx:
         self._data = {}
         self._read(strict=strict)
 
+    def __init__(self, dataset: Dict[str, pd.DataFrame]) -> None:
+        """Create a new Import XLSX class with the dataset
+
+        Parameters
+        ----------
+        dataset: Dict[str, pd.DataFrame]
+            dictionary of panda dataframes
+
+        Examples
+        --------
+        >>> xls = Xlsx(dataset=dicts_of_pd_dataframes)
+        """
+        self._data = dataset
+
     def _read(self, strict=False) -> Self:
         """read the xlsx file
 
