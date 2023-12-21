@@ -1,4 +1,4 @@
-# Welcome to pyfme
+# Welcome to rn3
 
 See more in [Getting started](getting_started.md)
 

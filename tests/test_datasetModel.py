@@ -1,7 +1,7 @@
 import pytest
 import os
 import json
-from pyfme import DatasetModel, Table
+from rn3 import DatasetModel, Table
 
 
 @pytest.fixture

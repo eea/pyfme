@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pyfme"
-version = "0.0.5"
+name = "rn3"
+version = "0.0.6"
 dependencies = [
     "numpy", "requests", "pandas", "XlsxWriter", "openpyxl", "typing-extensions"
 ]
@@ -28,4 +28,4 @@ dev = ["pytest","ruff","black","mkdocs","mkdocstrings[python]", "mkdocs-material
 test= ["pytest"]
 
 [tool.ruff]
-extend-exclude = ["tests", "pyfme/startup_script.py"]
+extend-exclude = ["tests", "rn3/startup_script.py"]

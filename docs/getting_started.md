@@ -3,5 +3,5 @@
 ## Installation
 
 ```
-pip install pyfme
+pip install rn3
 ```

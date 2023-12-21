@@ -1,3 +1,3 @@
 # Reference
 
-::: pyfme.read_excel
+::: rn3.read_excel

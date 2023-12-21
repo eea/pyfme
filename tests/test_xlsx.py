@@ -2,8 +2,8 @@ import json
 import os
 import pandas as pd
 import pytest
-from pyfme import Xlsx
-from pyfme import DatasetModel
+from rn3 import Xlsx
+from rn3 import DatasetModel
 
 
 @pytest.fixture

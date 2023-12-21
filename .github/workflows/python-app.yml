@@ -32,9 +32,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest pytest-cov
 
-      - name: Install pyfme
+      - name: Install rn3
         run: |
           pip install .[test]
       - name: Test with pytest
         run: |
-          pytest --cov=pyfme tests --disable-warnings
+          pytest --cov=rn3 tests --disable-warnings

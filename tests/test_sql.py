@@ -1,8 +1,8 @@
 import json
 import os
 import pytest
-from pyfme import DatasetModel
-from pyfme import Mysql
+from rn3 import DatasetModel
+from rn3 import Mysql
 
 
 @pytest.fixture
