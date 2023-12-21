@@ -8,15 +8,14 @@ from rn3 import DatasetModel
 
 @pytest.fixture
 def nitrate_dataset():
-    file_path = os.path.join(os.getcwd(), r"tests\data\nitrate_schema.json")
-    f = os.path.normpath(file_path)
+    f = os.path.join(os.getcwd(), "tests", "data", "nitrate_schema.json")
     ds = DatasetModel()
     return ds.from_json(json_filepath=f)
 
 
 @pytest.fixture
 def filename_xlsx():
-    file_path = os.path.join(os.getcwd(), r"tests\data\fake_italy_reporting_tiny.xlsx")
+    file_path = os.path.join(os.getcwd(), "tests", "data", "fake_italy_reporting_tiny.xlsx")
     return os.path.normpath(file_path)
 
 
