@@ -10,6 +10,11 @@ def nitrate_json_file_path():
 
 
 @pytest.fixture
+def pam_json_file_path():
+    return os.path.join(os.getcwd(), "tests/data/pam_schema.json")
+
+
+@pytest.fixture
 def nitrate_dataset(nitrate_json_file_path):
     ds = DatasetModel()
     return ds.from_json(json_filepath=nitrate_json_file_path)
@@ -20,6 +25,13 @@ def test_read_json_ok(nitrate_json_file_path):
     ds.from_json(json_filepath=nitrate_json_file_path)
     assert ds is not None
     assert isinstance(ds.table_names, list)
+
+
+def test_create_table_sql_cmd_ok(pam_json_file_path):
+    ds = DatasetModel()
+    ds.from_json(json_filepath=pam_json_file_path)
+    sql_cmd = ds.sql_cmd(database_name="EnergyCommunity", schema_name="annex_XXIV")
+    assert sql_cmd is not ""
 
 
 @pytest.mark.skip(reason="Github has not sandbox access")

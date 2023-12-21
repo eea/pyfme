@@ -1,5 +1,7 @@
 import json
 import numpy as np
+from .item import Item
+from typing import List
 
 
 class Table:
@@ -13,6 +15,12 @@ class Table:
         self._schema = table_json["recordSchema"]["fieldSchema"]
         self._name = table_json["nameTableSchema"]
         self._column_names_and_type = self._get_column_names_and_type()
+        self._items = self._read_items(
+            table_json=table_json["recordSchema"]["fieldSchema"]
+        )
+
+    def __repr__(self) -> str:
+        return "Table (" + self.name + ")"
 
     @property
     def name(self) -> str:
@@ -25,6 +33,10 @@ class Table:
     @property
     def columns(self) -> list[str]:
         return list(self._column_names_and_type.keys())
+
+    @property
+    def items(self) -> list[Item]:
+        return self._items
 
     @property
     def required(self) -> list[str]:
@@ -59,3 +71,28 @@ class Table:
             #    v = datetime
             names_and_type[name] = v
         return names_and_type
+
+    def _read_items(self, table_json: json) -> List[Item]:
+        items = []
+        for item in table_json:
+            items.append(Item(item_json=item))
+        return items
+
+    @property
+    def sql_create_cmd(self) -> str:
+        sql_cmd = "USE [DATABASE_NAME]\n"
+        sql_cmd += "GO\n"
+        sql_cmd += "SET ANSI_NULLS ON\n"
+        sql_cmd += "GO\n"
+        sql_cmd += "SET QUOTED_IDENTIFIER ON\n"
+        sql_cmd += "GO\n"
+        sql_cmd += f"CREATE TABLE [SCHEMA_NAME].[{self.name}](\n"
+        for item in self.items:
+            sql_cmd += "\t" + item.sql_create_cmd + "\n"
+
+        if "[text]" in sql_cmd:
+            sql_cmd += ") ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]\n"
+        else:
+            sql_cmd += ") ON [PRIMARY]\n"
+        sql_cmd += "GO\n"
+        return sql_cmd

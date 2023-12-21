@@ -8,10 +8,19 @@ from .table import Table
 class DatasetModel:
     def __init__(self) -> None:
         self._tables = []
+        self._name = ""
+
+    def __repr__(self) -> str:
+        return "Dataset (" + self.name + ")"
+
+    @property
+    def name(self) -> str:
+        return self._name
 
     def from_json(self, json_filepath: str) -> Self:
         json_data = json.load(open(json_filepath))
         self._tables = []
+        self._name = json_data["nameDatasetSchema"]
         for table in json_data["tableSchemas"]:
             self._tables.append(Table(table))
         return self
@@ -26,9 +35,22 @@ class DatasetModel:
             )
         json_data = request.json()
         self._tables = []
+        self._name = json_data["nameDatasetSchema"]
         for table in json_data["tableSchemas"]:
             self._tables.append(Table(table))
         return self
+
+    def sql_cmd(self, database_name=None, schema_name=None) -> str:
+        sql_cmd = ""
+        for table in self.tables:
+            sql_cmd += "\n"
+            tbl_cmd = table.sql_create_cmd
+            if database_name is not None:
+                tbl_cmd = tbl_cmd.replace("DATABASE_NAME", database_name)
+            if schema_name is not None:
+                tbl_cmd = tbl_cmd.replace("SCHEMA_NAME", schema_name)
+            sql_cmd += tbl_cmd + "\n"
+        return sql_cmd
 
     @property
     def table_names(self) -> list[str]:
@@ -39,6 +61,15 @@ class DatasetModel:
 
         """
         return [table.name for table in self._tables]
+
+    @property
+    def tables(self) -> list[Table]:
+        """Returns a list table objects.
+
+        Returns:
+            A list of table objects.
+        """
+        return self._tables
 
     def remove_table(self, table_name: str) -> Self:
         table = self.get_table(table_name=table_name)
