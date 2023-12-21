@@ -11,7 +11,7 @@ def nitrate_json_file_path():
 
 @pytest.fixture
 def pam_json_file_path():
-    return os.path.join("tests", "data", "pam_schema.json")
+    return os.path.join("tests", "data", "pam_schemaLALAL.json")
 
 
 @pytest.fixture
