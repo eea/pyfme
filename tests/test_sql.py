@@ -7,11 +7,10 @@ from rn3 import Mysql
 
 @pytest.fixture
 def pams_dataset():
-    f = os.path.join(os.getcwd(), r"tests\data\pam_schema.json")
     ds = DatasetModel()
-    return ds.from_json(json_filepath=f)
+    return ds.from_json("tests/data/pam_schema.json")
 
 
-def test_p(pams_dataset):
+def test_sql(pams_dataset):
     sql = Mysql()
     sql.create_table(dataset=pams_dataset)
