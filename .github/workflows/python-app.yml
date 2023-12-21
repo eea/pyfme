@@ -38,8 +38,3 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=rn3 tests --disable-warnings
-          - name: Install pypa/build
-          run: >-
-            python3 -m
-            pip install
-            build
