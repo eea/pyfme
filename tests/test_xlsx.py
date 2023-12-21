@@ -9,7 +9,7 @@ from pathlib import Path
 
 @pytest.fixture
 def nitrate_dataset():
-    f = os.path.join(os.getcwd(), "tests", "data", "nitrate_schema.json")
+    f = os.path.join(os.getcwd(), "tests/data/nitrate_schema.json")
     f = Path(f)
     ds = DatasetModel()
     return ds.from_json(json_filepath=f)
@@ -17,7 +17,7 @@ def nitrate_dataset():
 
 @pytest.fixture
 def filename_xlsx():
-    file_path = os.path.join(os.getcwd(), "tests", "data", "fake_italy_reporting_tiny.xlsx")
+    file_path = os.path.join(os.getcwd(), "tests/data/fake_italy_reporting_tiny.xlsx")
     return Path(file_path)
 
 
