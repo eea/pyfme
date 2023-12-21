@@ -15,7 +15,7 @@ def nitrate_dataset():
 
 @pytest.fixture
 def filename_xlsx():
-    return os.path.join(os.getcwd(), r"tests\data\fake_italy_reporting_tiny.xlsx")
+    return os.path.join(os.getcwd(), r"tests/data/fake_italy_reporting_tiny.xlsx")
 
 
 @pytest.fixture
