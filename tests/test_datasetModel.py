@@ -6,12 +6,14 @@ from rn3 import DatasetModel, Table
 
 @pytest.fixture
 def nitrate_json_file_path():
-    return os.path.join(os.getcwd(), r"tests/data/nitrate_schema.json")
+    file_path = os.path.join(os.getcwd(), r"tests/data/nitrate_schema.json")
+    return os.path.normpath(file_path)
 
 
 @pytest.fixture
 def pam_json_file_path():
-    return os.path.join(os.getcwd(), r"tests/data/pam_schema.json")
+    file_path = os.path.join(os.getcwd(), r"tests/data/pam_schema.json")
+    return os.path.normpath(file_path)
 
 
 @pytest.fixture
