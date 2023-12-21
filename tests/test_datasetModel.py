@@ -2,19 +2,16 @@ import pytest
 import os
 import json
 from rn3 import DatasetModel, Table
-from pathlib import Path
 
 
 @pytest.fixture
 def nitrate_json_file_path():
-    file_path = os.path.join(os.getcwd(), "tests/data/nitrate_schema.json")
-    return Path(file_path)
+    return "tests/data/nitrate_schema.json"
 
 
 @pytest.fixture
 def pam_json_file_path():
-    file_path = os.path.join(os.getcwd(), "tests/data/pam_schema.json")
-    return Path(file_path)
+    return "tests/data/pam_schema.json"
 
 
 @pytest.fixture
