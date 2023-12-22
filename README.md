@@ -1,3 +1,4 @@
-# rn3: Template Python repository
+# rn3: Python tools to help manage EEA Reportnet3 
 
-This repository serves as a template for creating a Python library
+This repository contains tools to ineract with Reportnet3.
+
