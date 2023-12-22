@@ -1,6 +1,6 @@
 import json
 import requests
-from typing import Optional
+from typing import Optional, Union
 from typing_extensions import Self
 from .table import Table
 
@@ -25,14 +25,14 @@ class DatasetModel:
             self._tables.append(Table(table))
         return self
 
-    def from_url(self, base_url: str, dataset_id: str, api_key: str) -> Self:
+    def from_url(
+        self, dataset_id: Union[int, str], api_key: str, base_url: str = "https://api.reportnet.europa.eu"
+    ) -> Self:
         headers = {"Authorization": api_key}
-        endpoint = base_url + r"/dataschema/v1/datasetId/" + dataset_id
+        endpoint = base_url + r"/dataschema/v1/datasetId/" + str(dataset_id)
         request = requests.get(endpoint, headers=headers)
         if not request.ok:
-            raise Exception(
-                f"Status Code: {request.status_code}. Could not retrieve schema with GET: {endpoint}."
-            )
+            raise Exception(f"Status Code: {request.status_code}. Could not retrieve schema with GET: {endpoint}.")
         json_data = request.json()
         self._tables = []
         self._name = json_data["nameDatasetSchema"]

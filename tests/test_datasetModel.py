@@ -1,7 +1,7 @@
 import pytest
 import os
 import json
-from rn3 import DatasetModel, Table
+from rn3 import DatasetModel, DatasetReferenceData, Table
 
 
 @pytest.fixture
@@ -32,18 +32,27 @@ def test_create_table_sql_cmd_ok(pam_json_file_path):
     ds.from_json(json_filepath=pam_json_file_path)
     sql_cmd = ds.sql_cmd(database_name="EnergyCommunity", schema_name="annex_XXIV")
     assert sql_cmd is not ""
+    with open(r"C:\Users\Ridler\AppData\Local\Temp\aa.txt", "w") as f:
+        f.write(sql_cmd)
 
 
 @pytest.mark.skip(reason="Github has not sandbox access")
 def test_read_url_ok():
     ds = DatasetModel()
     ds.from_url(
-        base_url=r"https://sandbox-api.reportnet.europa.eu",
-        dataset_id="20822",
+        dataset_id=20822,
         api_key="ApiKey d79237c1-8942-44b9-b6df-2ef20fca66a4",
+        base_url=r"https://sandbox-api.reportnet.europa.eu",
     )
     assert ds is not None
     assert isinstance(ds.table_names, list)
+
+
+@pytest.mark.skip(reason="MSSQL Server uses Windows Authentication")
+def test_create_sql_table_ok():
+    dsrd = DatasetReferenceData()
+    dsrd.from_xlsx(xlsx_filepath="tests/data/Reference Dataset - Reference data.xlsx")
+    dsrd.to_mssql("osprey", "EnergyCommunity", "annex_XXIV")
 
 
 def test_get_table_found(nitrate_dataset):

@@ -15,9 +15,7 @@ class Table:
         self._schema = table_json["recordSchema"]["fieldSchema"]
         self._name = table_json["nameTableSchema"]
         self._column_names_and_type = self._get_column_names_and_type()
-        self._items = self._read_items(
-            table_json=table_json["recordSchema"]["fieldSchema"]
-        )
+        self._items = self._read_items(table_json=table_json["recordSchema"]["fieldSchema"])
 
     def __repr__(self) -> str:
         return "Table (" + self.name + ")"
@@ -44,17 +42,11 @@ class Table:
 
     @property
     def date_columns(self) -> list[str]:
-        return [
-            k
-            for k in self.column_names_and_type.keys()
-            if self.column_names_and_type[k] == "DATE"
-        ]
+        return [k for k in self.column_names_and_type.keys() if self.column_names_and_type[k] == "DATE"]
 
     @property
     def non_date_fields(self) -> dict[str, object]:
-        return dict(
-            filter(lambda kv: kv[1] != "DATE", self.column_names_and_type.items())
-        )
+        return dict(filter(lambda kv: kv[1] != "DATE", self.column_names_and_type.items()))
 
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
@@ -87,12 +79,31 @@ class Table:
         sql_cmd += "SET QUOTED_IDENTIFIER ON\n"
         sql_cmd += "GO\n"
         sql_cmd += f"CREATE TABLE [SCHEMA_NAME].[{self.name}](\n"
-        for item in self.items:
-            sql_cmd += "\t" + item.sql_create_cmd + "\n"
 
-        if "[text]" in sql_cmd:
-            sql_cmd += ") ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]\n"
-        else:
-            sql_cmd += ") ON [PRIMARY]\n"
+        # if any(i.name == "Id" for i in self.items):
+        sql_cmd += "\t[Id] [int] IDENTITY(1,1) NOT NULL,\n"
+        for item in self.items:
+            if not item.name == "Id":
+                sql_cmd += "\t" + item.sql_create_cmd + "\n"
+
+        sql_cmd += "\t[ReportNet3HistoricReleaseId] [int] NOT NULL,\n"
+
+        sql_cmd += f"CONSTRAINT [PK_{self.name}] PRIMARY KEY CLUSTERED\n"
+        sql_cmd += "(\n"
+
+        sql_cmd += "\t[Id] ASC\n"
+        sql_cmd += ")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]\n"
+        sql_cmd += ") ON [PRIMARY]\n"
         sql_cmd += "GO\n"
+
+        sql_cmd += f"ALTER TABLE [SCHEMA_NAME].[{self.name}]  WITH NOCHECK ADD  CONSTRAINT [FK_{self.name}_ReportNet3HistoricReleases] FOREIGN KEY([ReportNet3HistoricReleaseId])\n"
+        sql_cmd += "REFERENCES [metadata].[ReportNet3HistoricReleases] ([Id])\n"
+        sql_cmd += "ON DELETE CASCADE\n"
+        sql_cmd += "GO\n"
+
+        sql_cmd += (
+            f"ALTER TABLE [SCHEMA_NAME].[{self.name}] CHECK CONSTRAINT [FK_{self.name}_ReportNet3HistoricReleases]\n"
+        )
+        sql_cmd += "GO\n"
+
         return sql_cmd
