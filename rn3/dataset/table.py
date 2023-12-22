@@ -15,7 +15,9 @@ class Table:
         self._schema = table_json["recordSchema"]["fieldSchema"]
         self._name = table_json["nameTableSchema"]
         self._column_names_and_type = self._get_column_names_and_type()
-        self._items = self._read_items(table_json=table_json["recordSchema"]["fieldSchema"])
+        self._items = self._read_items(
+            table_json=table_json["recordSchema"]["fieldSchema"]
+        )
 
     def __repr__(self) -> str:
         return "Table (" + self.name + ")"
@@ -42,11 +44,17 @@ class Table:
 
     @property
     def date_columns(self) -> list[str]:
-        return [k for k in self.column_names_and_type.keys() if self.column_names_and_type[k] == "DATE"]
+        return [
+            k
+            for k in self.column_names_and_type.keys()
+            if self.column_names_and_type[k] == "DATE"
+        ]
 
     @property
     def non_date_fields(self) -> dict[str, object]:
-        return dict(filter(lambda kv: kv[1] != "DATE", self.column_names_and_type.items()))
+        return dict(
+            filter(lambda kv: kv[1] != "DATE", self.column_names_and_type.items())
+        )
 
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
@@ -101,9 +109,7 @@ class Table:
         sql_cmd += "ON DELETE CASCADE\n"
         sql_cmd += "GO\n"
 
-        sql_cmd += (
-            f"ALTER TABLE [SCHEMA_NAME].[{self.name}] CHECK CONSTRAINT [FK_{self.name}_ReportNet3HistoricReleases]\n"
-        )
+        sql_cmd += f"ALTER TABLE [SCHEMA_NAME].[{self.name}] CHECK CONSTRAINT [FK_{self.name}_ReportNet3HistoricReleases]\n"
         sql_cmd += "GO\n"
 
         return sql_cmd

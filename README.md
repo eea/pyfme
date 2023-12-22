@@ -1,4 +1,4 @@
-# rn3: Python tools to help manage EEA Reportnet3 
+# rn3: Python tools to help manage EEA Reportnet3
 
 This repository contains tools to ineract with Reportnet3.
 
@@ -8,7 +8,7 @@ This repository contains tools to ineract with Reportnet3.
 
 ## Installation
 
-From PyPI: 
+From PyPI:
 
 `pip install rn3`
 
@@ -29,7 +29,7 @@ sql_cmd = ds.sql_cmd(self, database_name="EnergyCommunity", schema_name="annex_X
 print(sql_cmd)
 ```
 
-output: 
+output:
 
 ```
 USE [EnergyCommunity]
@@ -67,3 +67,8 @@ GO
 
 ```
 
+### Contributor note
+
+Before commit, run pre-commit hook
+`pip install pre-commit`
+`re-commit run -a`

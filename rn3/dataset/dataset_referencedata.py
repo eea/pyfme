@@ -27,7 +27,7 @@ class DatasetReferenceData:
                     if_exists="replace",
                     index=False,
                 )
-        except:
+        except Exception:
             print(
-                f"Error. Make sure executing on a computer with the database server and windows authentication provides you 'Owner' privileges."
+                "Error. Make sure executing on a computer with the database server and windows authentication provides you 'Owner' privileges."
             )

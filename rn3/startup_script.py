@@ -12,7 +12,9 @@ logger = None
 try:
     fmeengine = fme.macroValues["FME_ENGINE"]
     logger = fmeobjects.FMELogFile()
-    logger.logMessageString(f"Running on FME Server at with engine location: '{fmeengine}'.")
+    logger.logMessageString(
+        f"Running on FME Server at with engine location: '{fmeengine}'."
+    )
 except:
     print("Running Outside of the FME Server Context")
     pass
@@ -31,13 +33,20 @@ import uuid
 ######################################################
 python_directory = ""
 if local:
-    python_directory = os.path.join(r"C:\Users", os.getlogin(), r"Documents\FME\Plugins\Python")
+    python_directory = os.path.join(
+        r"C:\Users", os.getlogin(), r"Documents\FME\Plugins\Python"
+    )
 else:
-    python_directory = FME_MacroValues["FME_SHAREDRESOURCE_DATA"] + r"Nitrate/Engine/Plugins/Python/Python"
+    python_directory = (
+        FME_MacroValues["FME_SHAREDRESOURCE_DATA"]
+        + r"Nitrate/Engine/Plugins/Python/Python"
+    )
     logger.logMessageString(f"Python dirctory set to: '{python_directory}'.")
 
 if not os.path.isdir(python_directory):
-    raise FileNotFoundError(f"Error. Python library directory not found at {python_directory}")
+    raise FileNotFoundError(
+        f"Error. Python library directory not found at {python_directory}"
+    )
 sys.path.append(python_directory)
 
 import warnings
@@ -58,7 +67,9 @@ if local:
         rn3_version,
     )
 else:
-    rn3_directory = os.path.join(FME_MacroValues["FME_SHAREDRESOURCE_DATA"], "rn3", rn3_version)
+    rn3_directory = os.path.join(
+        FME_MacroValues["FME_SHAREDRESOURCE_DATA"], "rn3", rn3_version
+    )
 
 logger.logMessageString(f"rn3 dirctory set to: '{rn3_directory}'.")
 
