@@ -1,6 +1,7 @@
 import pandas as pd
 from typing_extensions import Self
 from sqlalchemy import create_engine
+import warnings
 
 
 class DatasetReferenceData:
@@ -8,7 +9,9 @@ class DatasetReferenceData:
         self._data: dict[str, pd.DataFrame] = {}
 
     def from_xlsx(self, xlsx_filepath: str) -> Self:
-        self._data = pd.read_excel(io=xlsx_filepath, sheet_name=None)
+        with warnings.catch_warnings(record=True):
+            warnings.simplefilter("always")
+            self._data = pd.read_excel(io=xlsx_filepath, sheet_name=None)
 
     def to_mssql(self, server_name: str, database_name: str, schema_name: str) -> None:
         engine = create_engine(
@@ -20,6 +23,7 @@ class DatasetReferenceData:
         )
         try:
             for key, df in self._data.items():
+                print(f"writing table: [{schema_name}].[dict_{key}]")
                 df.to_sql(
                     name=f"dict_{key}",
                     schema=schema_name,
@@ -29,5 +33,7 @@ class DatasetReferenceData:
                 )
         except Exception:
             print(
-                "Error. Make sure executing on a computer with the database server and windows authentication provides you 'Owner' privileges."
+                "Error. Make sure executing on a computer with the database \
+                server and windows authentication provides you 'Owner' \
+                privileges."
             )

@@ -2,7 +2,9 @@ import json
 import requests
 from typing import Optional, Union
 from typing_extensions import Self
+from sqlalchemy import create_engine
 from .table import Table
+import pandas as pd
 
 
 class DatasetModel:
@@ -56,6 +58,50 @@ class DatasetModel:
                 tbl_cmd = tbl_cmd.replace("SCHEMA_NAME", schema_name)
             sql_cmd += tbl_cmd + "\n"
         return sql_cmd
+
+    def sql_codelist_data(
+        self, server_name: str, database_name: str, schema_name: str
+    ) -> None:
+        for table in self.tables:
+            for item in table.items:
+                if "CODELIST" in item._rn3_type:
+                    items = item._code_list_items
+                    ids = list(range(1, len(items) + 1))
+                    df = pd.DataFrame({"Id": ids, "Value": items})
+                    self._write_table(
+                        server_name, database_name, schema_name, item.name, df
+                    )
+
+    def _write_table(
+        self,
+        server_name: str,
+        database_name: str,
+        schema_name: str,
+        table_name: str,
+        df: pd.DataFrame,
+    ):
+        engine = create_engine(
+            "mssql+pyodbc://@"
+            + server_name
+            + "/"
+            + database_name
+            + "?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server"
+        )
+        try:
+            print(f"writing table: [{schema_name}].[dict_{table_name}]")
+            df.to_sql(
+                name=f"dict_{table_name}",
+                schema=schema_name,
+                con=engine,
+                if_exists="replace",
+                index=False,
+            )
+        except Exception:
+            print(
+                "Error. Make sure executing on a computer with the database \
+                server and windows authentication provides you 'Owner' \
+                privileges."
+            )
 
     @property
     def table_names(self) -> list[str]:

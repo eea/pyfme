@@ -16,7 +16,6 @@ class Item:
         self._rn3_type = item_json.get("type")
         self._required = item_json.get("required")
         self._pk = item_json.get("pk")
-        self._codelist = item_json.get("codelistItems")
         self._id_record = item_json.get("idRecord")
         self._code_list_items = item_json.get("codelistItems")
         self._multiple_values = item_json.get("pkHasMultipleValues")

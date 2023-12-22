@@ -32,8 +32,6 @@ def test_create_table_sql_cmd_ok(pam_json_file_path):
     ds.from_json(json_filepath=pam_json_file_path)
     sql_cmd = ds.sql_cmd(database_name="EnergyCommunity", schema_name="annex_XXIV")
     assert sql_cmd is not ""
-    with open(r"C:\Users\Ridler\AppData\Local\Temp\aa.txt", "w") as f:
-        f.write(sql_cmd)
 
 
 @pytest.mark.skip(reason="Github has not sandbox access")
@@ -53,6 +51,13 @@ def test_create_sql_table_ok():
     dsrd = DatasetReferenceData()
     dsrd.from_xlsx(xlsx_filepath="tests/data/Reference Dataset - Reference data.xlsx")
     dsrd.to_mssql("osprey", "EnergyCommunity", "annex_XXIV")
+
+
+# @pytest.mark.skip(reason="MSSQL Server uses Windows Authentication")
+def test_create_sql_codelist_data_ok(pam_json_file_path):
+    ds = DatasetModel()
+    ds.from_json(json_filepath=pam_json_file_path)
+    ds.sql_codelist_data("osprey", "EnergyCommunity", "annex_XXIV")
 
 
 def test_get_table_found(nitrate_dataset):
