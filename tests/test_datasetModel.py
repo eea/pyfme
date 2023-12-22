@@ -53,7 +53,7 @@ def test_create_sql_table_ok():
     dsrd.to_mssql("osprey", "EnergyCommunity", "annex_XXIV")
 
 
-# @pytest.mark.skip(reason="MSSQL Server uses Windows Authentication")
+@pytest.mark.skip(reason="MSSQL Server uses Windows Authentication")
 def test_create_sql_codelist_data_ok(pam_json_file_path):
     ds = DatasetModel()
     ds.from_json(json_filepath=pam_json_file_path)
