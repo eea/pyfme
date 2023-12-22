@@ -38,7 +38,3 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=rn3 tests --disable-warnings
-      - name: Build
-        run: python -m build
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
