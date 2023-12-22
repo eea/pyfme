@@ -67,6 +67,56 @@ GO
 
 ```
 
+## <u>**Use 2**</u>: Write Code List Tables and Reference Data to database
+
+Export Reference Data to excel
+
+```
+import rn3
+dsrd = rn3.DatasetReferenceData()
+dsrd.from_xlsx(xlsx_filepath="~/Downloads/Reference Dataset - Reference data.xlsx")
+dsrd.to_mssql("osprey", "EnergyCommunity", "annex_XXIV")
+```
+
+output
+
+```
+writing table: [annex_XXIV].[dict_Sector]
+writing table: [annex_XXIV].[dict_Objectives]
+writing table: [annex_XXIV].[dict_UnionPolicies]
+writing table: [annex_XXIV].[dict_Dimensions]
+writing table: [annex_XXIV].[dict_Currencies]
+```
+
+Export the Codelist to database
+
+```
+ds = rn3.DatasetModel()
+
+ds.from_url(
+    dataset_id=60425,
+    api_key="ApiKey 7fee1baa-f8f9-49bf-a21b-227749c961d5",
+    base_url=r"https://api.reportnet.europa.eu",
+)
+ds.sql_codelist_data("osprey", "EnergyCommunity", "annex_XXIV")
+```
+
+output
+
+```
+writing table: [annex_XXIV].[dict_IsGroup]
+writing table: [annex_XXIV].[dict_GeographicalCoverage]
+writing table: [annex_XXIV].[dict_GHGAffected]
+writing table: [annex_XXIV].[dict_TypePolicyInstrument]
+writing table: [annex_XXIV].[dict_UnionPolicy]
+writing table: [annex_XXIV].[dict_PaMRelateAirQuality]
+writing table: [annex_XXIV].[dict_StatusImplementation]
+writing table: [annex_XXIV].[dict_ProjectionsScenario]
+writing table: [annex_XXIV].[dict_partNDC]
+writing table: [annex_XXIV].[dict_Type]
+writing table: [annex_XXIV].[dict_PolicyImpacting]
+```
+
 ### Contributor note
 
 Before commit, run pre-commit hook

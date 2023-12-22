@@ -54,10 +54,10 @@ def test_create_sql_table_ok():
 
 
 @pytest.mark.skip(reason="MSSQL Server uses Windows Authentication")
-def test_create_sql_codelist_data_ok(pam_json_file_path):
-    ds = DatasetModel()
-    ds.from_json(json_filepath=pam_json_file_path)
-    ds.sql_codelist_data("osprey", "EnergyCommunity", "annex_XXIV")
+def test_create_sql_codelist_data_ok():
+    dsrd = DatasetReferenceData()
+    dsrd.from_xlsx(xlsx_filepath="tests/data/Reference Dataset - Reference data.xlsx")
+    dsrd.to_mssql("osprey", "EnergyCommunity", "annex_XXIV")
 
 
 def test_get_table_found(nitrate_dataset):

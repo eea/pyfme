@@ -31,7 +31,7 @@ class DatasetModel:
         self,
         dataset_id: Union[int, str],
         api_key: str,
-        base_url: str = "https://api.reportnet.europa.eu",
+        base_url: str = "https://api-reportnet.europa.eu",
     ) -> Self:
         headers = {"Authorization": api_key}
         endpoint = base_url + r"/dataschema/v1/datasetId/" + str(dataset_id)
