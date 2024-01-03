@@ -43,6 +43,6 @@ class DatasetReferenceData:
         for key, df in self._data.items():
             self._whitespace_remover(self._data[key])
 
-    def _whitespace_remover(df: pd.DataFrame) -> None:
+    def _whitespace_remover(self, df: pd.DataFrame) -> None:
         for col in df.columns:
-            df[col].apply(lambda x: x.strip() if isinstance(x, str) else x)
+            df[col] = df[col].apply(lambda x: x.strip() if isinstance(x, str) else x)
