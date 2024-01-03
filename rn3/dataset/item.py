@@ -12,7 +12,10 @@ class Item:
         """
         self._json_data = item_json
         self._id = item_json.get("id")
-        self._name = item_json.get("name")
+        name = item_json.get("name")
+        if name.lower() == "id":
+            name = name + "_field"
+        self._name = name
         self._rn3_type = item_json.get("type")
         self._required = item_json.get("required")
         self._pk = item_json.get("pk")
@@ -65,7 +68,6 @@ class Item:
         sql_type = ""
         if self._rn3_type in [
             "LINK",
-            "MULTISELECT_CODELIST",
             "CODELIST",
             "NUMBER_INTEGER",
             "URL",
@@ -77,8 +79,12 @@ class Item:
             sql_type = "[nvarchar](500)"
         elif self._rn3_type == "TEXTAREA":
             sql_type = "[text]"
-        elif self._rn3_type == "URL":
+        elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "[nvarchar](500)"
+        elif self._rn3_type == "ATTACHMENT":
+            sql_type = "[varbinary](MAX)"
+        elif self._rn3_type == "DATE":
+            sql_type = "[date]"
         else:
             raise Warning(
                 f"In item '{self.name}' has unsuported type '{self._rn3_type}'"

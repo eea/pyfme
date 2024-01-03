@@ -21,10 +21,10 @@ import rn3
 ds = DatasetModel()
 ds.from_url(
     dataset_id=20822,
-    api_key="ApiKey d79237c1-8942-44b9-b6df-2ef20fca66a4",
+    api_key="ApiKey 0123456-2789-yyyy-xxxx-zzzzz",
     base_url=r"https://sandbox-api.reportnet.europa.eu",
 )
-sql_cmd = ds.sql_cmd(self, database_name="EnergyCommunity", schema_name="annex_XXIV")
+sql_cmd = ds.sql_cmd(database_name="EnergyCommunity", schema_name="annex_XXIV")
 
 print(sql_cmd)
 ```
