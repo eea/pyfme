@@ -12,6 +12,7 @@ class DatasetReferenceData:
         with warnings.catch_warnings(record=True):
             warnings.simplefilter("always")
             self._data = pd.read_excel(io=xlsx_filepath, sheet_name=None)
+            self._clean()
 
     def to_mssql(self, server_name: str, database_name: str, schema_name: str) -> None:
         engine = create_engine(
@@ -37,3 +38,11 @@ class DatasetReferenceData:
                 server and windows authentication provides you 'Owner' \
                 privileges."
             )
+
+    def _clean(self) -> None:
+        for key, df in self._data.items():
+            self._whitespace_remover(self._data[key])
+
+    def _whitespace_remover(df: pd.DataFrame) -> None:
+        for col in df.columns:
+            df[col].apply(lambda x: x.strip() if isinstance(x, str) else x)
