@@ -60,7 +60,7 @@ class DatasetModel:
             sql_cmd += "\n"
         return sql_cmd
 
-    def sqlalchemy_generate_models(self) -> str:
+    def sqlalchemy_generate_models(self, schema_name=None) -> str:
         sql_cmd = "from sqlalchemy import Column, ForeignKey, Boolean, Date, DateTime, Float, Integer, String\n"
         sql_cmd += "from sqlalchemy.orm import declarative_base, relationship\n"
         sql_cmd += "from sqlalchemy.dialects.mssql import NVARCHAR, TEXT\n"
@@ -68,7 +68,9 @@ class DatasetModel:
         sql_cmd += "\n"
 
         sql_cmd += "class ReportNet3HistoricReleases(Base):\n"
-        sql_cmd += "\t__tablename__ = 'reportnet3historicreleases'\n\n"
+        sql_cmd += "\t__tablename__ = 'ReportNet3HistoricReleases'\n"
+        sql_cmd += "\t__table_args__ = {'schema': 'metadata'}\n\n"
+
         sql_cmd += "\tId = Column(Integer, primary_key=True)\n"
         sql_cmd += "\tcountryCode = Column(NVARCHAR(2), nullable=False)\n"
         sql_cmd += "\tReportNet3DataflowId = Column(Integer, nullable=False)\n"
@@ -85,6 +87,9 @@ class DatasetModel:
         for table in self.tables:
             sql_cmd += "\n"
             tbl_cmd = table.sqlalchemy_class
+            if schema_name is not None:
+                tbl_cmd = tbl_cmd.replace("SCHEMA_NAME", schema_name)
+
             sql_cmd += str(tbl_cmd)
             sql_cmd += "\n"
         return sql_cmd

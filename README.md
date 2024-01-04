@@ -121,4 +121,15 @@ writing table: [annex_XXIV].[dict_PolicyImpacting]
 
 Before commit, run pre-commit hook
 `pip install pre-commit`
-`re-commit run -a`
+`pre-commit run -a`
+
+Connect to DB using sqlalchmy and odbc
+
+```
+from sqlalchemy import create_engine
+
+servername = "osprey"
+dbname = "EnergyCommunity"
+engine = create_engine('mssql+pyodbc://@' + servername + '/' + dbname + '?trusted_connection=yes&driver=ODBC Driver 17 for SQL Server')
+conn = engine.connect()
+```
