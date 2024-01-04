@@ -123,8 +123,6 @@ class Table:
         for item in self.items:
             if not item.name == "Id":
                 sql_cmd += f"\t{item.sqlalchemy_column}\n"
-        sql_cmd += "\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('reportnet3historicrelease.Id'))\n"
-        sql_cmd += (
-            "\treportnet3historicrelease = relationship('ReportNet3HistoricRelease')\n"
-        )
+        sql_cmd += "\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('reportnet3historicreleases.Id'))\n"
+        sql_cmd += "\treportnet3historicreleases = relationship('ReportNet3HistoricReleases')\n"
         return sql_cmd
