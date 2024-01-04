@@ -118,13 +118,13 @@ class Table:
     def sqlalchemy_class(self) -> str:
         sql_cmd = f"class {self.name}(Base):\n"
         sql_cmd += f"\t__tablename__ = '{self.name.lower()}'\n"
-        sql_cmd += f"\t\n"
-        sql_cmd += f"\tId = Column(Integer, primary_key=True)\n"
+        sql_cmd += "\t\n"
+        sql_cmd += "\tId = Column(Integer, primary_key=True)\n"
         for item in self.items:
             if not item.name == "Id":
                 sql_cmd += f"\t{item.sqlalchemy_column}\n"
-        sql_cmd += f"\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('reportnet3historicrelease.Id'))\n"
+        sql_cmd += "\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('reportnet3historicrelease.Id'))\n"
         sql_cmd += (
-            f"\treportnet3historicrelease = relationship('ReportNet3HistoricRelease')\n"
+            "\treportnet3historicrelease = relationship('ReportNet3HistoricRelease')\n"
         )
         return sql_cmd
