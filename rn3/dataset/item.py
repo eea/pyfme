@@ -98,6 +98,43 @@ class Item:
             sql_cmd += " NULL,"
         return sql_cmd
 
+    @property
+    def sqlalchemy_column(self) -> str:
+        sql_type = ""
+        if self._rn3_type in [
+            "LINK",
+            "CODELIST",
+            "NUMBER_INTEGER",
+            "URL",
+        ]:
+            sql_type = "Integer"
+        elif self._rn3_type == "NUMBER_DECIMAL":
+            sql_type = "Float"
+        elif self._rn3_type == "TEXT":
+            sql_type = "NVARCHAR(500)"
+        elif self._rn3_type == "TEXTAREA":
+            sql_type = "TEXT"
+        elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
+            sql_type = "NVARCHAR(500)"
+        elif self._rn3_type == "ATTACHMENT":
+            sql_type = "LargeBinary"
+        elif self._rn3_type == "DATE":
+            sql_type = "Date"
+        else:
+            raise Warning(
+                f"In item '{self.name}' has unsuported type '{self._rn3_type}'"
+            )
+
+        s = f"{self.name} = Column({sql_type}"
+        if self._pk:
+            s += ", primary_key=True"
+        if self._required:
+            s += ", nullable=True"
+        else:
+            s += ", nullable=False"
+        s += ")"
+        return s
+
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
         for s in self._schema:

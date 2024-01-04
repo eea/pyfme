@@ -56,7 +56,38 @@ class DatasetModel:
                 tbl_cmd = tbl_cmd.replace("DATABASE_NAME", database_name)
             if schema_name is not None:
                 tbl_cmd = tbl_cmd.replace("SCHEMA_NAME", schema_name)
-            sql_cmd += tbl_cmd + "\n"
+            sql_cmd += str(tbl_cmd)
+            sql_cmd += "\n"
+        return sql_cmd
+
+    def sqlalchemy_generate_models(self) -> str:
+        sql_cmd = "from sqlalchemy import Column, ForeignKey, Boolean, Date, DateTime, Float, Integer, String\n"
+        sql_cmd += "from sqlalchemy.orm import relationship\n"
+        sql_cmd += "from sqlalchemy.dialects.mssql import NVARCHAR, TEXT\n"
+        sql_cmd += "from sqlalchemy.ext.declarative import declarative_base\n"
+        sql_cmd += "\nBase = declarative_base()\n"
+        sql_cmd += "\n"
+
+        sql_cmd += "class ReportNet3HistoricReleases(Base):\n"
+        sql_cmd += "\t__tablename__ = 'reportnet3historicreleases'\n\n"
+        sql_cmd += "\tId = Column(Integer, primary_key=True)\n"
+        sql_cmd += "\tcountryCode = Column(NVARCHAR(2), nullable=False)\n"
+        sql_cmd += "\tReportNet3DataflowId = Column(Integer, nullable=False)\n"
+        sql_cmd += "\tReportNet3EuDatasetId = Column(Integer, nullable=True)\n"
+        sql_cmd += "\tdataURL = Column(NVARCHAR(100), nullable=False)\n"
+        sql_cmd += "\treleaseDate = Column(DateTime, nullable=False)\n"
+        sql_cmd += "\tisLatestRelease = Column(Boolean, nullable=False)\n"
+        sql_cmd += "\tfmeJobId = Column(Boolean, nullable=True)\n"
+        sql_cmd += "\tfmeJobStartedAt = Column(DateTime, nullable=True)\n"
+        sql_cmd += "\tfmeSuccess = Column(Boolean, nullable=True)\n"
+        sql_cmd += "\tfmeErrorLog = Column(NVARCHAR(1000), nullable=True)\n"
+        sql_cmd += "\n"
+
+        for table in self.tables:
+            sql_cmd += "\n"
+            tbl_cmd = table.sqlalchemy_class
+            sql_cmd += str(tbl_cmd)
+            sql_cmd += "\n"
         return sql_cmd
 
     def sql_codelist_data(

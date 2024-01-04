@@ -96,7 +96,7 @@ class Table:
 
         sql_cmd += "\t[ReportNet3HistoricReleaseId] [int] NOT NULL,\n"
 
-        sql_cmd += f"CONSTRAINT [PK_{self.name}] PRIMARY KEY CLUSTERED\n"
+        sql_cmd += f"CONSTRAINT [PK_{self.name}_1] PRIMARY KEY CLUSTERED\n"
         sql_cmd += "(\n"
 
         sql_cmd += "\t[Id] ASC\n"
@@ -112,4 +112,19 @@ class Table:
         sql_cmd += f"ALTER TABLE [SCHEMA_NAME].[{self.name}] CHECK CONSTRAINT [FK_{self.name}_ReportNet3HistoricReleases]\n"
         sql_cmd += "GO\n"
 
+        return sql_cmd
+
+    @property
+    def sqlalchemy_class(self) -> str:
+        sql_cmd = f"class {self.name}(Base):\n"
+        sql_cmd += f"\t__tablename__ = '{self.name.lower()}'\n"
+        sql_cmd += f"\t\n"
+        sql_cmd += f"\tId = Column(Integer, primary_key=True)\n"
+        for item in self.items:
+            if not item.name == "Id":
+                sql_cmd += f"\t{item.sqlalchemy_column}\n"
+        sql_cmd += f"\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('reportnet3historicrelease.Id'))\n"
+        sql_cmd += (
+            f"\treportnet3historicrelease = relationship('ReportNet3HistoricRelease')\n"
+        )
         return sql_cmd
