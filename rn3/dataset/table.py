@@ -75,7 +75,7 @@ class Table:
     def _read_items(self, table_json: json) -> List[Item]:
         items = []
         for item in table_json:
-            items.append(Item(item_json=item))
+            items.append(Item(item_json=item, table_name=self.name))
         return items
 
     @property
@@ -117,7 +117,7 @@ class Table:
     @property
     def sqlalchemy_class(self) -> str:
         sql_cmd = f"class {self.name}(Base):\n"
-        sql_cmd += f"\t__tablename__ = '{self.name.lower()}'\n"
+        sql_cmd += f"\t__tablename__ = '{self.name}'\n"
         sql_cmd += "\t__table_args__ = {'schema': 'SCHEMA_NAME'}\n"
         sql_cmd += "\t\n"
         sql_cmd += "\tId = Column(Integer, primary_key=True)\n"

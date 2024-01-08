@@ -3,18 +3,19 @@ import numpy as np
 
 
 class Item:
-    def __init__(self, item_json: json) -> None:
+    def __init__(self, item_json: json, table_name: str) -> None:
         """Create a new Item class
 
         Args:
             item_json (json): json object of the item.
 
         """
+        self._table_name = table_name
         self._json_data = item_json
         self._id = item_json.get("id")
         name = item_json.get("name")
         if name.lower() == "id":
-            name = name + "_field"
+            name = f"Id_{table_name}"
         self._name = name
         self._rn3_type = item_json.get("type")
         self._required = item_json.get("required")
@@ -46,8 +47,8 @@ class Item:
         return list(self._column_names_and_type.keys())
 
     @property
-    def required(self) -> list[str]:
-        return [s["name"] for s in self._schema if s["required"]]
+    def required(self) -> bool:
+        return self._required
 
     @property
     def date_columns(self) -> list[str]:
@@ -126,14 +127,20 @@ class Item:
             )
 
         s = f"{self.name} = Column({sql_type}"
-        if self._pk:
-            s += ", primary_key=True"
-        if self._required:
-            s += ", nullable=True"
+        if self.name[:3].lower() == "fk_":
+            fk_table_name = self.name[3:]
+            s += f", ForeignKey('SCHEMA_NAME.{fk_table_name}.Id_{fk_table_name}'))\n"
+            s += f"\t{fk_table_name} = relationship('{fk_table_name}')"
+            return s
         else:
-            s += ", nullable=False"
-        s += ")"
-        return s
+            if self._pk:
+                s += ", primary_key=True"
+            if self._required:
+                s += ", nullable=False"
+            else:
+                s += ", nullable=True"
+            s += ")"
+            return s
 
     def _get_column_names_and_type(self) -> dict[str, object]:
         names_and_type = {}
