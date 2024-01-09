@@ -77,9 +77,9 @@ class Item:
         elif self._rn3_type == "NUMBER_DECIMAL":
             sql_type = "[float]"
         elif self._rn3_type == "TEXT":
-            sql_type = "[nvarchar](500)"
+            sql_type = "[nvarchar](5000)"
         elif self._rn3_type == "TEXTAREA":
-            sql_type = "[text]"
+            sql_type = "[nvarchar](MAX)"
         elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "[nvarchar](500)"
         elif self._rn3_type == "ATTACHMENT":
@@ -112,9 +112,9 @@ class Item:
         elif self._rn3_type == "NUMBER_DECIMAL":
             sql_type = "Float"
         elif self._rn3_type == "TEXT":
-            sql_type = "NVARCHAR(500)"
+            sql_type = "NVARCHAR(5000)"
         elif self._rn3_type == "TEXTAREA":
-            sql_type = "TEXT"
+            sql_type = "NVARCHAR(MAX)"
         elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "NVARCHAR(500)"
         elif self._rn3_type == "ATTACHMENT":
