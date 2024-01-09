@@ -124,6 +124,7 @@ class Table:
         for item in self.items:
             if not item.name == "Id":
                 sql_cmd += f"\t{item.sqlalchemy_column}\n"
-        sql_cmd += "\tReportNet3HistoricReleaseId = Column(Integer, ForeignKey('metadata.ReportNet3HistoricReleases.Id'))\n"
-        sql_cmd += "\tReportNet3HistoricReleases = relationship('ReportNet3HistoricReleases')\n"
+        # sql_cmd += "\tsnapshotId = Column(BigInteger, nullable=False)\n"
+        sql_cmd += "\tsnapshotId = Column(BigInteger, ForeignKey('metadata.HarvestingJobs.snapshotId'))\n"
+        sql_cmd += "\tHarvestingJobs = relationship('HarvestingJobs')\n"
         return sql_cmd

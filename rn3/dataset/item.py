@@ -112,9 +112,9 @@ class Item:
         elif self._rn3_type == "NUMBER_DECIMAL":
             sql_type = "Float"
         elif self._rn3_type == "TEXT":
-            sql_type = "NVARCHAR(5000)"
+            sql_type = "NVARCHAR(4000)"
         elif self._rn3_type == "TEXTAREA":
-            sql_type = "NVARCHAR(MAX)"
+            sql_type = "NVARCHAR(None)"
         elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "NVARCHAR(500)"
         elif self._rn3_type == "ATTACHMENT":
@@ -127,7 +127,7 @@ class Item:
             )
 
         s = f"{self.name} = Column({sql_type}"
-        if self.name[:3].lower() == "fk_":
+        if self.name[:3].lower() == "fk_NEVERTHECASE":
             fk_table_name = self.name[3:]
             s += f", ForeignKey('SCHEMA_NAME.{fk_table_name}.Id_{fk_table_name}'))\n"
             s += f"\t{fk_table_name} = relationship('{fk_table_name}')"
