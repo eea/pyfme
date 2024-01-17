@@ -61,7 +61,7 @@ class DatasetModel:
         return sql_cmd
 
     def sqlalchemy_generate_models(self, schema_name=None) -> str:
-        sql_cmd = "from sqlalchemy import Column, ForeignKey, BigInteger, Boolean, Date, DateTime, Float, Integer, String\n"
+        sql_cmd = "from sqlalchemy import Column, ForeignKey, BigInteger, Boolean, Date, DateTime, Float, LargeBinary, Integer, String\n"
         sql_cmd += "from sqlalchemy.orm import declarative_base, relationship\n"
         sql_cmd += "from sqlalchemy.dialects.mssql import VARCHAR, NVARCHAR, TEXT\n"
         sql_cmd += "\nBase = declarative_base()\n"

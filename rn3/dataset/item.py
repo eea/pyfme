@@ -126,7 +126,11 @@ class Item:
                 f"In item '{self.name}' has unsuported type '{self._rn3_type}'"
             )
 
-        s = f"{self.name} = Column({sql_type}"
+        var_name = self.name
+        if self.name[0].isdigit():
+            var_name = "start_digit_" + self.name
+
+        s = f"{var_name} = Column({sql_type}"
         if self.name[:3].lower() == "fk_NEVERTHECASE":
             fk_table_name = self.name[3:]
             s += f", ForeignKey('SCHEMA_NAME.{fk_table_name}.Id_{fk_table_name}'))\n"
@@ -139,7 +143,7 @@ class Item:
                 s += ", nullable=False"
             else:
                 s += ", nullable=True"
-            s += ")"
+            s += f", name='{self.name}')"
             return s
 
     def _get_column_names_and_type(self) -> dict[str, object]:

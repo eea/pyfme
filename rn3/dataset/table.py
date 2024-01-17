@@ -13,7 +13,7 @@ class Table:
 
         """
         self._schema = table_json["recordSchema"]["fieldSchema"]
-        self._name = table_json["nameTableSchema"]
+        self._name = table_json["nameTableSchema"].replace(" ", "_")
         self._column_names_and_type = self._get_column_names_and_type()
         self._items = self._read_items(
             table_json=table_json["recordSchema"]["fieldSchema"]
