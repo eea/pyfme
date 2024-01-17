@@ -21,7 +21,7 @@ import rn3
 ds = DatasetModel()
 ds.from_url(
     dataset_id=20822,
-    api_key="ApiKey 0123456-2789-yyyy-xxxx-zzzzz",
+    api_key="ApiKey 0123456-12345-yyyy-xxxx-zzzzz",
     base_url=r"https://sandbox-api.reportnet.europa.eu",
 )
 sql_cmd = ds.sql_cmd(database_name="EnergyCommunity", schema_name="annex_XXIV")
@@ -95,7 +95,7 @@ ds = rn3.DatasetModel()
 
 ds.from_url(
     dataset_id=60425,
-    api_key="ApiKey 7fee1baa-f8f9-49bf-a21b-227749c961d5",
+    api_key="ApiKey 7xxxxxx-fyyyy-4xxxx-azzz-zzzzzzzzz",
     base_url=r"https://api.reportnet.europa.eu",
 )
 ds.sql_codelist_data("osprey", "EnergyCommunity", "annex_XXIV")
