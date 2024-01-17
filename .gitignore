@@ -1,6 +1,9 @@
 # PyCharm
 .idea/
 
+# VS CODE
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,6 +11,9 @@ __pycache__/
 
 # C extensions
 *.so
+
+# Temp work space
+temp/
 
 # Distribution / packaging
 .Python
