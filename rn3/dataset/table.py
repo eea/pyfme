@@ -88,6 +88,42 @@ class Table:
         sql_cmd += "GO\n"
         sql_cmd += f"CREATE TABLE [SCHEMA_NAME].[{self.name}](\n"
 
+        sql_cmd += "\t[Id] [bigint] IDENTITY(1,1) NOT NULL,\n"
+        for item in self.items:
+            if not item.name == "Id":
+                sql_cmd += "\t" + item.sql_create_cmd + "\n"
+
+        sql_cmd += "\t[snapshotId] [bigint] NOT NULL,\n"
+
+        sql_cmd += f"CONSTRAINT [PK_{self.name}_1] PRIMARY KEY CLUSTERED\n"
+        sql_cmd += "(\n"
+
+        sql_cmd += "\t[Id] ASC\n"
+        sql_cmd += ")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]\n"
+        sql_cmd += ") ON [PRIMARY]\n"
+        sql_cmd += "GO\n"
+
+        sql_cmd += f"ALTER TABLE [SCHEMA_NAME].[{self.name}]  WITH NOCHECK ADD  CONSTRAINT [FK_{self.name}_HarvestingJobs] FOREIGN KEY([snapshotId])\n"
+        sql_cmd += "REFERENCES [metadata].[HarvestingJobs] ([snapshotId])\n"
+        sql_cmd += "ON DELETE CASCADE\n"
+        sql_cmd += "GO\n"
+
+        sql_cmd += f"ALTER TABLE [SCHEMA_NAME].[{self.name}] CHECK CONSTRAINT [FK_{self.name}_HarvestingJobs]\n"
+        sql_cmd += "GO\n"
+
+        return sql_cmd
+
+    @property
+    @DeprecationWarning
+    def sql_create_cmd_HistoricalReleases(self) -> str:
+        sql_cmd = "USE [DATABASE_NAME]\n"
+        sql_cmd += "GO\n"
+        sql_cmd += "SET ANSI_NULLS ON\n"
+        sql_cmd += "GO\n"
+        sql_cmd += "SET QUOTED_IDENTIFIER ON\n"
+        sql_cmd += "GO\n"
+        sql_cmd += f"CREATE TABLE [SCHEMA_NAME].[{self.name}](\n"
+
         # if any(i.name == "Id" for i in self.items):
         sql_cmd += "\t[Id] [int] IDENTITY(1,1) NOT NULL,\n"
         for item in self.items:

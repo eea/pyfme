@@ -77,7 +77,7 @@ class Item:
         elif self._rn3_type == "NUMBER_DECIMAL":
             sql_type = "[float]"
         elif self._rn3_type == "TEXT":
-            sql_type = "[nvarchar](5000)"
+            sql_type = "[nvarchar](4000)"
         elif self._rn3_type == "TEXTAREA":
             sql_type = "[nvarchar](MAX)"
         elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
