@@ -1,0 +1,700 @@
+Id,Reporting_element,Production_or_Use,Estimated_impact_of_biofuels_bioliquids_biomass,Unit,Description_of_methods_to_estimate_the_impact,Start_period,End_period,Attachment,ReportNet3HistoricReleaseId
+1,Biodiversity,Use,Not available,,,,,,84
+2,"Water stock (ground water, surface water) & water availability",Use,Not available,,,,,,84
+3,Soils,Use,Not available,,,,,,84
+4,Air quality,Use,Not available,,,,,,84
+5,Biodiversity,Production,Not available,,,,,,84
+6,"Water stock (ground water, surface water) & water availability",Production,Not available,,,,,,84
+7,Soils,Production,Not available,,,,,,84
+8,Air quality,Production,Not available,,,,,,84
+9,Biodiversity,Use,,,,,,,85
+10,"Water stock (ground water, surface water) & water availability",Use,,,,,,,85
+11,Soils,Use,,,,,,,85
+12,Air quality,Use,,,,,,,85
+13,Biodiversity,Production,,,,,,,85
+14,"Water stock (ground water, surface water) & water availability",Production,,,,,,,85
+15,Soils,Production,,,,,,,85
+16,Air quality,Production,,,,,,,85
+17,Biodiversity,Use,,,,,,,86
+18,"Water stock (ground water, surface water) & water availability",Use,,,,,,,86
+19,Soils,Use,,,,,,,86
+20,Air quality,Use,,,,,,,86
+21,Biodiversity,Production,,,,,,,86
+22,"Water stock (ground water, surface water) & water availability",Production,,,,,,,86
+23,Soils,Production,,,,,,,86
+24,Air quality,Production,,,,,,,86
+25,Biodiversity,Use,,,,,,,87
+26,"Water stock (ground water, surface water) & water availability",Use,,,,,,,87
+27,Soils,Use,,,,,,,87
+28,Air quality,Use,,,,,,,87
+29,Biodiversity,Production,,,,,,,87
+30,"Water stock (ground water, surface water) & water availability",Production,,,,,,,87
+31,Soils,Production,,,,,,,87
+32,Air quality,Production,,,,,,,87
+33,Biodiversity,Use,,,,,,,88
+34,"Water stock (ground water, surface water) & water availability",Use,,,,,,,88
+35,Soils,Use,,,,,,,88
+36,Air quality,Use,"Use of bioliquids: no information available.
+-	 Use of biofuels: this impact cannot be estimated at the moment, due to the lack of studies and methodologies that establish emission factors for each of the aspects that are taken into account in the emission estimates: type of fuel, % mixture, vehicle type and category, technology, consumption of each type of fuel in each, driving pattern, speed, ambient temperature, etc. However, despite the lack of clear and conclusive evidence, the consulted bibliography1, 2, 3 could indicate possible reductions in emissions of some pollutants and increases in others, when compared with its fossil option. Reductions in particles, NOx and CO could be expected in the case of bioethanol, and decreases in particles, CO and hydrocarbons in the case of biodiesel. On the other hand, there could be increases in volatile organic compounds and NOx in bioethanol and biodiesel respectively. However, there are discrepancies in the magnitude and sign of the impact between the studies consulted and there is no complete and conclusive information available to estimate the impact in the future.
+-	Biomass: the expected increase of consumption of solid biomass in the residential sector could lead to an impact on air quality due to the increase in particles in urban and rural environments. There is wide evidence of the relationship between biomass burning and air pollution, with global, regional and local impacts on air quality, health and climate4. Biomass combustion is widespread, is increasing and makes a significant contribution to PM2.5 ambient air levels, especially in winter, in the developed world, due to its use in domestic heating. The burning of biomass in agriculture is also a source of PM2.5 emissions and other pollutants5 and has been linked to health effects6. In Spain, the municipality of Villanueva del Arzobispo frequently registers high levels of particles in the coldest months of the year, exceeding the permitted levels in several years. Source contribution studies indicate that the high levels of particles originate from biomass combustion activities in domestic heating installations, among others7. The Villanueva del Arzobispo8 air quality plan seeks to return air quality to levels established by law. One of the measures established is the prohibition of burning biomass and other solid fuels in equipment that does not guarantee emissions below the limits established for fireplaces, stoves and boilers in Regulations (EU) 2015/1185 and 2015/1189 (eco-design regulation). For those types of facilities not included in the scope of these regulations, particle emissions may not exceed 50 mg/m³, referred to an O2 content of 13%. The air quality plan considers this measure as the one with the greatest impact on the reduction of particle emissions in the domestic sector. From the previous measure it is evident that the eco-design regulations do not cover the entire spectrum of domestic heating devices that could be used with solid biomass. Therefore, despite the efforts planned by Spain to promote the use of types of biomass less polluting and devices that comply with the limits established in the eco-design regulations, there is a lack of harmonized European regulations to cover the two main gaps:
+•	Combustion boilers that use solid fuel (including woody biomass) with a nominal thermal power between 500 Kw and 1 MW.
+•	Boilers and heaters/stoves that use non-woody biomass as solid fuel (of any nominal thermal power) excluded from both Regulation 2015/1189 and Regulation 2015/1185.
+On the other hand, the estimates of the impacts of the consumption of renewable energies carried out by the European Environment Agency9, show how the emissions of particles derived from the use of biomass are not offset by the emissions avoided by the rest of renewables. Only in the year 2021, the increasing effect of the use of heat pumps for heating and cooling, produces a reversal of this fact, becoming renewables as a w",NA,"A qualitative impact estimate has been carried out based on a bibliographic review of data, evaluations, reports, studies and other documents, which have been referenced in the ""Estimated impact"" column and are listed below in order of appearance in the text:
+
+Biofuels:
+1.	Harish K. Jeswani, A. C. (2020). Environmental sustainability of biofuels: a review. The Royal Society Publishing.
+2.	Dhanya, S. P. (2011). Air Quality and Biofuels 
+3.	EMEP/EEA air pollutant emission inventory guidebook - 2019
+
+Biomass:
+4.	https://www.sciencedirect.com/science/article/pii/S0048969716324561
+5.	Prioritizing reductions of particulate matter from sources that are also significant sources of black carbon - analysis and guidance.   Executive Body for the Convention on Long-range Transboundary Air Pollution  Working Group on Strategies and Review. May 2021
+6.	https://www.who.int/docstore/peh/Vegetation_fires/Backgroundpapers/BackgrPap7.pdf
+7.	https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/Cap3_Criterios%20evaluacion_tcm30-186479.pdf
+8.	https://villanuevadelarzobispo.es/wp-content/uploads/2021/04/Plan-municipal-de-mejora-de-la-calidad-del-aire-en-Villanueva-del-Arzob.pdf__;!!BgLsOpJl!tRAWZdfW0NuQWPvYpn4ZWgZv2vHkUjmiFk3KRT7ktod1nG6GF19NPPM4W2y_c76GPswMNYgXbJS5_yd2kek$
+9.	Dashboard - Impacts of renewable energy use on decarbonisation and air pollutant emissions — European Environment Agency (europa.eu)
+10.	https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-5106
+11.	https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/primerpncca_2019_tcm30-502010.pdf
+
+
+Bibliographic review of public data, assessments, reports and documents that relations an increased use of solid biomass in the domestic sector with increased emissions of particles that worsen air quality in urban and rural areas.",2021-01-01,2023-12-31,,88
+37,Biodiversity,Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,88
+38,"Water stock (ground water, surface water) & water availability",Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,88
+39,Soils,Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,88
+40,Air quality,Production,"There is not enough information available to assess the possible impact on air quality of the production of biofuels, bioliquids and biomass. The impact will depend on the size, location and emission control systems of the facilities dedicated to this activity.",NA,NA,,,,88
+41,Biodiversity,Use,,,,,,,89
+42,"Water stock (ground water, surface water) & water availability",Use,,,,,,,89
+43,Soils,Use,,,,,,,89
+44,Air quality,Use,,,,,,,89
+45,Biodiversity,Production,,,,,,,89
+46,"Water stock (ground water, surface water) & water availability",Production,,,,,,,89
+47,Soils,Production,,,,,,,89
+48,Air quality,Production,,,,,,,89
+49,Biodiversity,Use,,,,,,,90
+50,"Water stock (ground water, surface water) & water availability",Use,,,,,,,90
+51,Soils,Use,,,,,,,90
+52,Air quality,Use,"NOx (as NO2) reduction of 0.167
+NMVOC reduction of 0.159
+SOx (as SO2) reduction of 0.0006
+NH3 reduction of 0.005
+PM2.5 reduction of 0.011",kt,"The projected stock and vehicle km travelled were provided for a package of measures. This projected activity data was provided by Energy and Water Agency using 2010-2017 actual fleet characteristics and mileage activity to project years from 2018-2040. The emissions were estimated using stock and mean activity, whilst selecting the energy balance and FAME functions in Copert 5.6, using data provided by the Energy & Water Agency. In this scenario the fuel consumption was used as a prime driver for the majority of pollutants. ",2021-01-01,2030-12-31,,90
+53,Biodiversity,Production,,,,,,,90
+54,"Water stock (ground water, surface water) & water availability",Production,,,,,,,90
+55,Soils,Production,,,,,,,90
+56,Air quality,Production,,,,,,,90
+57,Biodiversity,Use,,,,,,,91
+58,"Water stock (ground water, surface water) & water availability",Use,,,,,,,91
+59,Soils,Use,,,,,,,91
+60,Air quality,Use,,,,,,,91
+61,Biodiversity,Production,,,,,,,91
+62,"Water stock (ground water, surface water) & water availability",Production,,,,,,,91
+63,Soils,Production,,,,,,,91
+64,Air quality,Production,,,,,,,91
+65,Biodiversity,Use,,,,,,,92
+66,"Water stock (ground water, surface water) & water availability",Use,,,,,,,92
+67,Soils,Use,,,,,,,92
+68,Air quality,Use,,,,,,,92
+69,Biodiversity,Production,,,,,,,92
+70,"Water stock (ground water, surface water) & water availability",Production,,,,,,,92
+71,Soils,Production,,,,,,,92
+72,Air quality,Production,,,,,,,92
+73,Biodiversity,Use,,,,,,,93
+74,"Water stock (ground water, surface water) & water availability",Use,,,,,,,93
+75,Soils,Use,,,,,,,93
+76,Air quality,Use,,,,,,,93
+77,Biodiversity,Production,,,,,,,93
+78,"Water stock (ground water, surface water) & water availability",Production,,,,,,,93
+79,Soils,Production,,,,,,,93
+80,Air quality,Production,,,,,,,93
+81,Biodiversity,Use,,,,,,,94
+82,"Water stock (ground water, surface water) & water availability",Use,,,,,,,94
+83,Soils,Use,,,,,,,94
+84,Air quality,Use,,,,,,,94
+85,Biodiversity,Production,,,,,,,94
+86,"Water stock (ground water, surface water) & water availability",Production,,,,,,,94
+87,Soils,Production,,,,,,,94
+88,Air quality,Production,,,,,,,94
+89,Biodiversity,Use,,,,,,,95
+90,"Water stock (ground water, surface water) & water availability",Use,,,,,,,95
+91,Soils,Use,,,,,,,95
+92,Air quality,Use,,,,,,,95
+93,Biodiversity,Production,,,,,,,95
+94,"Water stock (ground water, surface water) & water availability",Production,,,,,,,95
+95,Soils,Production,,,,,,,95
+96,Air quality,Production,,,,,,,95
+97,Biodiversity,Use,,,,,,,96
+98,"Water stock (ground water, surface water) & water availability",Use,,,,,,,96
+99,Soils,Use,,,,,,,96
+100,Air quality,Use,,,,,,,96
+101,Biodiversity,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,96
+102,"Water stock (ground water, surface water) & water availability",Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,96
+103,Soils,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,96
+104,Air quality,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,96
+105,Biodiversity,Use,,,,,,,97
+106,"Water stock (ground water, surface water) & water availability",Use,,,,,,,97
+107,Soils,Use,,,,,,,97
+108,Air quality,Use,,,,,,,97
+109,Biodiversity,Production,,,,,,,97
+110,"Water stock (ground water, surface water) & water availability",Production,,,,,,,97
+111,Soils,Production,,,,,,,97
+112,Air quality,Production,,,,,,,97
+113,Biodiversity,Use,,,,,,,98
+114,"Water stock (ground water, surface water) & water availability",Use,,,,,,,98
+115,Soils,Use,,,,,,,98
+116,Air quality,Use,,,,,,,98
+117,Biodiversity,Production,,,,,,,98
+118,"Water stock (ground water, surface water) & water availability",Production,,,,,,,98
+119,Soils,Production,,,,,,,98
+120,Air quality,Production,,,,,,,98
+121,Biodiversity,Use,,,,,,,133
+122,"Water stock (ground water, surface water) & water availability",Use,,,,,,,133
+123,Soils,Use,,,,,,,133
+124,Air quality,Use,,,,,,,133
+125,Biodiversity,Production,,,,,,,133
+126,"Water stock (ground water, surface water) & water availability",Production,,,,,,,133
+127,Soils,Production,,,,,,,133
+128,Air quality,Production,,,,,,,133
+129,Biodiversity,Use,,,,,,,146
+130,"Water stock (ground water, surface water) & water availability",Use,,,,,,,146
+131,Soils,Use,,,,,,,146
+132,Air quality,Use,,,,,,,146
+133,Biodiversity,Production,,,,,,,146
+134,"Water stock (ground water, surface water) & water availability",Production,,,,,,,146
+135,Soils,Production,,,,,,,146
+136,Air quality,Production,,,,,,,146
+153,Biodiversity,Use,,,Not available.,,,,151
+154,"Water stock (ground water, surface water) & water availability",Use,,,Not available.,,,,151
+155,Soils,Use,,,Not available.,,,,151
+156,Air quality,Use,,,Not available.,,,,151
+157,Biodiversity,Production,,,Not available.,,,,151
+158,"Water stock (ground water, surface water) & water availability",Production,,,Not available.,,,,151
+159,Soils,Production,,,Not available.,,,,151
+160,Air quality,Production,,,Not available.,,,,151
+161,Biodiversity,Use,,,"Level of naturalness (subcompartment level) should be maintained or improved through forest management, not allowed to downgrade (defined in the forest act). Forest management planning (every 10 years) set the goals and control the status. Forest authority regularly controls the status during the validity of the management plan.",,,,163
+162,"Water stock (ground water, surface water) & water availability",Use,,,"Regeneration after felling is obligatory, regeneration periods are defined in the forest act and controlled by the forest authority that contribute to maintain the optimal water management characteristics of forests.",,,,163
+163,Soils,Use,,,See description under “water management” and in addition soil damages must be minimized during management activities (defined in the forest act) and recovery measures are obligatory. These are controlled by the forest authority.,,,,163
+164,Air quality,Use,,,Nor relevant.,,,,163
+165,Biodiversity,Production,,,,,,,163
+166,"Water stock (ground water, surface water) & water availability",Production,,,,,,,163
+167,Soils,Production,,,,,,,163
+168,Air quality,Production,,,,,,,163
+169,Biodiversity,Use,no data available or incomplete,,,,,,166
+170,"Water stock (ground water, surface water) & water availability",Use,no data available or incomplete,,,,,,166
+171,Soils,Use,no data available or incomplete,,,,,,166
+172,Air quality,Use,no data available or incomplete,,,,,,166
+173,Biodiversity,Production,no production site or refinery in Luxembourg,,,,,,166
+174,"Water stock (ground water, surface water) & water availability",Production,no production site or refinery in Luxembourg,,,,,,166
+175,Soils,Production,no production site or refinery in Luxembourg,,,,,,166
+176,Air quality,Production,no production site or refinery in Luxembourg,,,,,,166
+177,Biodiversity,Use,no data available or incomplete,,,,,,171
+178,"Water stock (ground water, surface water) & water availability",Use,no data available or incomplete,,,,,,171
+179,Soils,Use,no data available or incomplete,,,,,,171
+180,Air quality,Use,no data available or incomplete,,,,,,171
+181,Biodiversity,Production,no production site or refinery in Luxembourg,,,,,,171
+182,"Water stock (ground water, surface water) & water availability",Production,no production site or refinery in Luxembourg,,,,,,171
+183,Soils,Production,no production site or refinery in Luxembourg,,,,,,171
+184,Air quality,Production,no production site or refinery in Luxembourg,,,,,,171
+185,Biodiversity,Use,,,,,,,172
+186,"Water stock (ground water, surface water) & water availability",Use,,,,,,,172
+187,Soils,Use,,,,,,,172
+188,Air quality,Use,,,,,,,172
+189,Biodiversity,Production,,,,,,,172
+190,"Water stock (ground water, surface water) & water availability",Production,,,,,,,172
+191,Soils,Production,,,,,,,172
+192,Air quality,Production,,,,,,,172
+193,Biodiversity,Use,,,,,,,176
+194,"Water stock (ground water, surface water) & water availability",Use,,,,,,,176
+195,Soils,Use,,,,,,,176
+196,Air quality,Use,,,,,,,176
+197,Biodiversity,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,176
+198,"Water stock (ground water, surface water) & water availability",Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,176
+199,Soils,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,176
+200,Air quality,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,176
+201,Biodiversity,Use,Not available,,,,,,179
+202,"Water stock (ground water, surface water) & water availability",Use,Not available,,,,,,179
+203,Soils,Use,Not available,,,,,,179
+204,Air quality,Use,Not available,,,,,,179
+205,Biodiversity,Production,Not available,,,,,,179
+206,"Water stock (ground water, surface water) & water availability",Production,Not available,,,,,,179
+207,Soils,Production,Not available,,,,,,179
+208,Air quality,Production,Not available,,,,,,179
+209,Biodiversity,Use,,,,,,,180
+210,"Water stock (ground water, surface water) & water availability",Use,,,,,,,180
+211,Soils,Use,,,,,,,180
+212,Air quality,Use,,,,,,,180
+213,Biodiversity,Production,,,,,,,180
+214,"Water stock (ground water, surface water) & water availability",Production,,,,,,,180
+215,Soils,Production,,,,,,,180
+216,Air quality,Production,,,,,,,180
+217,Biodiversity,Use,,,,,,,181
+218,"Water stock (ground water, surface water) & water availability",Use,,,,,,,181
+219,Soils,Use,,,,,,,181
+220,Air quality,Use,,,,,,,181
+221,Biodiversity,Production,,,,,,,181
+222,"Water stock (ground water, surface water) & water availability",Production,,,,,,,181
+223,Soils,Production,,,,,,,181
+224,Air quality,Production,,,,,,,181
+225,Biodiversity,Use,,,,,,,185
+226,"Water stock (ground water, surface water) & water availability",Use,,,,,,,185
+227,Soils,Use,,,,,,,185
+228,Air quality,Use,,,,,,,185
+229,Biodiversity,Production,,,,,,,185
+230,"Water stock (ground water, surface water) & water availability",Production,,,,,,,185
+231,Soils,Production,,,,,,,185
+232,Air quality,Production,,,,,,,185
+233,Biodiversity,Use,,,,,,,187
+234,"Water stock (ground water, surface water) & water availability",Use,,,,,,,187
+235,Soils,Use,,,,,,,187
+236,Air quality,Use,,,,,,,187
+237,Biodiversity,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,187
+238,"Water stock (ground water, surface water) & water availability",Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,187
+239,Soils,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,187
+240,Air quality,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,187
+241,Biodiversity,Use,,,Not available.,,,,195
+242,"Water stock (ground water, surface water) & water availability",Use,,,Not available.,,,,195
+243,Soils,Use,,,Not available.,,,,195
+244,Air quality,Use,,,Not available.,,,,195
+245,Biodiversity,Production,,,Not available.,,,,195
+246,"Water stock (ground water, surface water) & water availability",Production,,,Not available.,,,,195
+247,Soils,Production,,,Not available.,,,,195
+248,Air quality,Production,,,Not available.,,,,195
+249,Soils,Production,,,,,,,199
+250,Biodiversity,Use,,,,,,,199
+251,"Water stock (ground water, surface water) & water availability",Use,,,,,,,199
+252,Soils,Use,,,,,,,199
+253,Air quality,Use,,,,,,,199
+254,Biodiversity,Production,,,,,,,199
+255,"Water stock (ground water, surface water) & water availability",Production,,,,,,,199
+256,Air quality,Production,,,,,,,199
+257,Biodiversity,Use,,,,,,,204
+258,"Water stock (ground water, surface water) & water availability",Use,,,,,,,204
+259,Soils,Use,,,,,,,204
+260,Air quality,Use,,,,,,,204
+261,Biodiversity,Production,,,,,,,204
+262,"Water stock (ground water, surface water) & water availability",Production,,,,,,,204
+263,Soils,Production,,,,,,,204
+264,Air quality,Production,,,,,,,204
+265,Biodiversity,Use,,,,,,,205
+266,"Water stock (ground water, surface water) & water availability",Use,,,,,,,205
+267,Soils,Use,,,,,,,205
+268,Air quality,Use,,,,,,,205
+269,Biodiversity,Production,,,,,,,205
+270,"Water stock (ground water, surface water) & water availability",Production,,,,,,,205
+271,Soils,Production,,,,,,,205
+272,Air quality,Production,,,,,,,205
+273,Biodiversity,Use,,,"Level of naturalness (subcompartment level) should be maintained or improved through forest management, not allowed to downgrade (defined in the forest act). Forest management planning (every 10 years) set the goals and control the status. Forest authority regularly controls the status during the validity of the management plan.",,,,209
+274,"Water stock (ground water, surface water) & water availability",Use,,,"Regeneration after felling is obligatory, regeneration periods are defined in the forest act and controlled by the forest authority that contribute to maintain the optimal water management characteristics of forests.",,,,209
+275,Soils,Use,,,See description under “water management” and in addition soil damages must be minimized during management activities (defined in the forest act) and recovery measures are obligatory. These are controlled by the forest authority.,,,,209
+276,Air quality,Use,,,Nor relevant.,,,,209
+277,Biodiversity,Production,,,,,,,209
+278,"Water stock (ground water, surface water) & water availability",Production,,,,,,,209
+279,Soils,Production,,,,,,,209
+280,Air quality,Production,,,,,,,209
+281,Biodiversity,Use,,,,,,,217
+282,"Water stock (ground water, surface water) & water availability",Use,,,,,,,217
+283,Soils,Use,,,,,,,217
+284,Air quality,Use,,,,,,,217
+285,Biodiversity,Production,,,,,,,217
+286,"Water stock (ground water, surface water) & water availability",Production,,,,,,,217
+287,Soils,Production,,,,,,,217
+288,Air quality,Production,,,,,,,217
+289,Biodiversity,Use,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+290,"Water stock (ground water, surface water) & water availability",Use,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+291,Soils,Use,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+292,Air quality,Use,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+293,Biodiversity,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+294,"Water stock (ground water, surface water) & water availability",Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+295,Soils,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+296,Air quality,Production,"For biofuels in transport the NEa report  over 2021 (NEa (2021) (Report Renewable Energy in transport in The Netherlands  (Dutch only) https://www.emissieautoriteit.nl/onderwerpen/algemeen-hernieuwbare-energie-voor-vervoer/documenten/publicatie/2022/07/01/totaalrapportage-energie-voor-vervoer-2021) shows that only a very limited amount (1,3%) of conventional fuels, based on food and feed crops, were brought on the market. The feedstock for these fuels (mostly maize and wheat) was imported.  No new agricultural land has been brought into use for bioenergy in general. 
+
+Negative consequences abroad, due to the import of raw materials, are prevented through the sustainability criteria  that are applicable for these biomass flows. For this reason, the impact on biodiversity, water resources, water quality and soil quality as a result of growing crops for the production of biofuels is immaterial in the Netherlands. The Netherlands focuses on renewable electricity and on the use of waste residues for the production of biofuels, bioliquids and biomass fuels, to avoid the use (new) agricultural land for renewable energy production.",,,,,,218
+297,Biodiversity,Use,,,,,,,219
+298,"Water stock (ground water, surface water) & water availability",Use,,,,,,,219
+299,Soils,Use,,,,,,,219
+300,Air quality,Use,,,,,,,219
+301,Biodiversity,Production,,,,,,,219
+302,"Water stock (ground water, surface water) & water availability",Production,,,,,,,219
+303,Soils,Production,,,,,,,219
+304,Air quality,Production,,,,,,,219
+305,Biodiversity,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:1AEA046690E3CF4B7A62CBD017C8BAB1,221
+306,"Water stock (ground water, surface water) & water availability",Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:E49D3CFF852D7E56FF2609DE4E87A03B,221
+307,Soils,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:5332F45B999136B1EF287BFEDABF14B2,221
+308,Air quality,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:E8FD50784A8FE1D770F34944A25F6FB4,221
+309,Biodiversity,Production,,,,,,Bioenergy Systems in Sweden.pdf:865:55684:E0F11AAA9DBCAB56609212496364CD30,221
+310,"Water stock (ground water, surface water) & water availability",Production,,,,,,Miljöpåverkan av skogsbränsleuttag.pdf:865:55684:3DCBA5AD9ECC46299AA7AD3E3F6DBC89,221
+311,Soils,Production,,,,,,Miljöpåverkan av skogsbränsleuttag.pdf:865:55684:97E4129A1482718714610AB0D7D18C20,221
+312,Air quality,Production,,,,,,Bioenergy Systems in Sweden.pdf:865:55684:A47B70B6D88CCD470C981BCC722AF474,221
+313,Biodiversity,Use,,,,,,,224
+314,"Water stock (ground water, surface water) & water availability",Use,,,,,,,224
+315,Soils,Use,,,,,,,224
+316,Air quality,Use,,,,,,,224
+317,Biodiversity,Production,,,,,,,224
+318,"Water stock (ground water, surface water) & water availability",Production,,,,,,,224
+319,Soils,Production,,,,,,,224
+320,Air quality,Production,,,,,,,224
+321,Biodiversity,Use,,,,,,,226
+322,"Water stock (ground water, surface water) & water availability",Use,,,,,,,226
+323,Soils,Use,,,,,,,226
+324,Air quality,Use,,,,,,,226
+325,Biodiversity,Production,,,,,,,226
+326,"Water stock (ground water, surface water) & water availability",Production,,,,,,,226
+327,Soils,Production,,,,,,,226
+328,Air quality,Production,,,,,,,226
+329,Biodiversity,Use,,,,,,,234
+330,"Water stock (ground water, surface water) & water availability",Use,,,,,,,234
+331,Soils,Use,,,,,,,234
+332,Air quality,Use,,,,,,,234
+333,Biodiversity,Production,,,,,,,234
+334,"Water stock (ground water, surface water) & water availability",Production,,,,,,,234
+335,Soils,Production,,,,,,,234
+336,Air quality,Production,,,,,,,234
+337,Biodiversity,Use,N/A,,,,,,235
+338,"Water stock (ground water, surface water) & water availability",Use,N/A,,,,,,235
+339,Soils,Use,N/A,,,,,,235
+340,Air quality,Use,"Reduction of air pollution with PM10 (-48%)
+Reduction of air pollution with PM 2,5 (-38%)",%,"Report on air quality in Slovenia in 2021, by the Slovenian Energy Agency (http://www.arso.si/zrak/kakovost%20zraka/poro%c4%8dila%20in%20publikacije/Letno_porocilo_2021_Final.pdf)",2005-12-31,2021-12-31,Letno_porocilo_2021_Final.pdf:865:55684:E75A2FF4834389E0D72BD93BC4B971EF,235
+341,Biodiversity,Production,N/A,,,,,,235
+342,"Water stock (ground water, surface water) & water availability",Production,N/A,,,,,,235
+343,Soils,Production,N/A,,,,,,235
+344,Air quality,Production,N/A,,,,,,235
+353,Biodiversity,Use,,,Not available.,,,,239
+354,"Water stock (ground water, surface water) & water availability",Use,,,Not available.,,,,239
+355,Soils,Use,,,Not available.,,,,239
+356,Air quality,Use,,,Not available.,,,,239
+357,Biodiversity,Production,,,Not available.,,,,239
+358,"Water stock (ground water, surface water) & water availability",Production,,,Not available.,,,,239
+359,Soils,Production,,,Not available.,,,,239
+360,Air quality,Production,,,Not available.,,,,239
+369,Biodiversity,Use,,,,,,,241
+370,"Water stock (ground water, surface water) & water availability",Use,,,,,,,241
+371,Soils,Use,,,,,,,241
+372,Air quality,Use,,,,,,,241
+373,Biodiversity,Production,,,,,,,241
+374,"Water stock (ground water, surface water) & water availability",Production,,,,,,,241
+375,Soils,Production,,,,,,,241
+376,Air quality,Production,,,,,,,241
+377,Biodiversity,Use,Not available,,,,,,244
+378,"Water stock (ground water, surface water) & water availability",Use,Not available,,,,,,244
+379,Soils,Use,Not available,,,,,,244
+380,Air quality,Use,Not available,,,,,,244
+381,Biodiversity,Production,Not available,,,,,,244
+382,"Water stock (ground water, surface water) & water availability",Production,Not available,,,,,,244
+383,Soils,Production,Not available,,,,,,244
+384,Air quality,Production,Not available,,,,,,244
+385,Biodiversity,Use,,,,,,,246
+386,"Water stock (ground water, surface water) & water availability",Use,,,,,,,246
+387,Soils,Use,,,,,,,246
+388,Air quality,Use,"NOx (as NO2) reduction of 0.167
+NMVOC reduction of 0.159
+SOx (as SO2) reduction of 0.0006
+NH3 reduction of 0.005
+PM2.5 reduction of 0.011",kt,"The projected stock and vehicle km travelled were provided for a package of measures. This projected activity data was provided by Energy and Water Agency using 2010-2017 actual fleet characteristics and mileage activity to project years from 2018-2040. The emissions were estimated using stock and mean activity, whilst selecting the energy balance and FAME functions in Copert 5.6, using data provided by the Energy & Water Agency. In this scenario the fuel consumption was used as a prime driver for the majority of pollutants. ",2021-01-01,2030-12-31,,246
+389,Biodiversity,Production,,,,,,,246
+390,"Water stock (ground water, surface water) & water availability",Production,,,,,,,246
+391,Soils,Production,,,,,,,246
+392,Air quality,Production,,,,,,,246
+393,Biodiversity,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:1AEA046690E3CF4B7A62CBD017C8BAB1,248
+394,"Water stock (ground water, surface water) & water availability",Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:E49D3CFF852D7E56FF2609DE4E87A03B,248
+395,Soils,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:5332F45B999136B1EF287BFEDABF14B2,248
+396,Air quality,Use,,,,,,bioenergi-pa-ratt-satt.pdf:865:55684:E8FD50784A8FE1D770F34944A25F6FB4,248
+397,Biodiversity,Production,,,,,,Bioenergy Systems in Sweden.pdf:865:55684:E0F11AAA9DBCAB56609212496364CD30,248
+398,"Water stock (ground water, surface water) & water availability",Production,,,,,,Miljöpåverkan av skogsbränsleuttag.pdf:865:55684:3DCBA5AD9ECC46299AA7AD3E3F6DBC89,248
+399,Soils,Production,,,,,,Miljöpåverkan av skogsbränsleuttag.pdf:865:55684:97E4129A1482718714610AB0D7D18C20,248
+400,Air quality,Production,,,,,,Bioenergy Systems in Sweden.pdf:865:55684:A47B70B6D88CCD470C981BCC722AF474,248
+401,"Water stock (ground water, surface water) & water availability",Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,250
+402,Biodiversity,Use,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",,,,,,250
+403,"Water stock (ground water, surface water) & water availability",Use,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",,,,,,250
+404,Soils,Use,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",,,,,,250
+405,Air quality,Use,"Use of bioliquids: no information available.
+-	 Use of biofuels: this impact cannot be estimated at the moment, due to the lack of studies and methodologies that establish emission factors for each of the aspects that are taken into account in the emission estimates: type of fuel, % mixture, vehicle type and category, technology, consumption of each type of fuel in each, driving pattern, speed, ambient temperature, etc. However, despite the lack of clear and conclusive evidence, the consulted bibliography1, 2, 3 could indicate possible reductions in emissions of some pollutants and increases in others, when compared with its fossil option. Reductions in particles, NOx and CO could be expected in the case of bioethanol, and decreases in particles, CO and hydrocarbons in the case of biodiesel. On the other hand, there could be increases in volatile organic compounds and NOx in bioethanol and biodiesel respectively. However, there are discrepancies in the magnitude and sign of the impact between the studies consulted and there is no complete and conclusive information available to estimate the impact in the future.
+-	Biomass: the expected increase of consumption of solid biomass in the residential sector could lead to an impact on air quality due to the increase in particles in urban and rural environments. There is wide evidence of the relationship between biomass burning and air pollution, with global, regional and local impacts on air quality, health and climate4. Biomass combustion is widespread, is increasing and makes a significant contribution to PM2.5 ambient air levels, especially in winter, in the developed world, due to its use in domestic heating. The burning of biomass in agriculture is also a source of PM2.5 emissions and other pollutants5 and has been linked to health effects6. In Spain, the municipality of Villanueva del Arzobispo frequently registers high levels of particles in the coldest months of the year, exceeding the permitted levels in several years. Source contribution studies indicate that the high levels of particles originate from biomass combustion activities in domestic heating installations, among others7. The Villanueva del Arzobispo8 air quality plan seeks to return air quality to levels established by law. One of the measures established is the prohibition of burning biomass and other solid fuels in equipment that does not guarantee emissions below the limits established for fireplaces, stoves and boilers in Regulations (EU) 2015/1185 and 2015/1189 (eco-design regulation). For those types of facilities not included in the scope of these regulations, particle emissions may not exceed 50 mg/m³, referred to an O2 content of 13%. The air quality plan considers this measure as the one with the greatest impact on the reduction of particle emissions in the domestic sector. From the previous measure it is evident that the eco-design regulations do not cover the entire spectrum of domestic heating devices that could be used with solid biomass. Therefore, despite the efforts planned by Spain to promote the use of types of biomass less polluting and devices that comply with the limits established in the eco-design regulations, there is a lack of harmonized European regulations to cover the two main gaps:
+•	Combustion boilers that use solid fuel (including woody biomass) with a nominal thermal power between 500 Kw and 1 MW.
+•	Boilers and heaters/stoves that use non-woody biomass as solid fuel (of any nominal thermal power) excluded from both Regulation 2015/1189 and Regulation 2015/1185.
+On the other hand, the estimates of the impacts of the consumption of renewable energies carried out by the European Environment Agency9, show how the emissions of particles derived from the use of biomass are not offset by the emissions avoided by the rest of renewables. Only in the year 2021, the increasing effect of the use of heat pumps for heating and cooling, produces a reversal of this fact, becoming renewables as a w",NA,"A qualitative impact estimate has been carried out based on a bibliographic review of data, evaluations, reports, studies and other documents, which have been referenced in the ""Estimated impact"" column and are listed below in order of appearance in the text:
+
+Biofuels:
+1.	Harish K. Jeswani, A. C. (2020). Environmental sustainability of biofuels: a review. The Royal Society Publishing.
+2.	Dhanya, S. P. (2011). Air Quality and Biofuels 
+3.	EMEP/EEA air pollutant emission inventory guidebook - 2019
+
+Biomass:
+4.	https://www.sciencedirect.com/science/article/pii/S0048969716324561
+5.	Prioritizing reductions of particulate matter from sources that are also significant sources of black carbon - analysis and guidance.   Executive Body for the Convention on Long-range Transboundary Air Pollution  Working Group on Strategies and Review. May 2021
+6.	https://www.who.int/docstore/peh/Vegetation_fires/Backgroundpapers/BackgrPap7.pdf
+7.	https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/Cap3_Criterios%20evaluacion_tcm30-186479.pdf
+8.	https://villanuevadelarzobispo.es/wp-content/uploads/2021/04/Plan-municipal-de-mejora-de-la-calidad-del-aire-en-Villanueva-del-Arzob.pdf__;!!BgLsOpJl!tRAWZdfW0NuQWPvYpn4ZWgZv2vHkUjmiFk3KRT7ktod1nG6GF19NPPM4W2y_c76GPswMNYgXbJS5_yd2kek$
+9.	Dashboard - Impacts of renewable energy use on decarbonisation and air pollutant emissions — European Environment Agency (europa.eu)
+10.	https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-5106
+11.	https://www.miteco.gob.es/es/calidad-y-evaluacion-ambiental/temas/primerpncca_2019_tcm30-502010.pdf
+
+
+Bibliographic review of public data, assessments, reports and documents that relations an increased use of solid biomass in the domestic sector with increased emissions of particles that worsen air quality in urban and rural areas.",2021-01-01,2023-12-31,,250
+406,Biodiversity,Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,250
+407,Soils,Production,"Royal Decree 1597/2011, of November 4, which regulates the sustainability criteria of biofuels and bioliquids, the National Sustainability Verification System and the double value of some biofuels for computation purposes, (modified in May 1, 2018) does not incorporate data that economic agents must provide in this regard.
+
+In any case, due to the currently scarce use of national raw materials for the production of biofuels, the impacts referred to in the statement of this item are considered not relevant.",NA,NA,,,,250
+408,Air quality,Production,"There is not enough information available to assess the possible impact on air quality of the production of biofuels, bioliquids and biomass. The impact will depend on the size, location and emission control systems of the facilities dedicated to this activity.",NA,NA,,,,250
+409,Biodiversity,Use,,,"Level of naturalness (subcompartment level) should be maintained or improved through forest management, not allowed to downgrade (defined in the forest act). Forest management planning (every 10 years) set the goals and control the status. Forest authority regularly controls the status during the validity of the management plan.",,,,251
+410,"Water stock (ground water, surface water) & water availability",Use,,,"Regeneration after felling is obligatory, regeneration periods are defined in the forest act and controlled by the forest authority that contribute to maintain the optimal water management characteristics of forests.",,,,251
+411,Soils,Use,,,See description under “water management” and in addition soil damages must be minimized during management activities (defined in the forest act) and recovery measures are obligatory. These are controlled by the forest authority.,,,,251
+412,Air quality,Use,,,Nor relevant.,,,,251
+413,Biodiversity,Production,,,,,,,251
+414,"Water stock (ground water, surface water) & water availability",Production,,,,,,,251
+415,Soils,Production,,,,,,,251
+416,Air quality,Production,,,,,,,251
+418,Biodiversity,Use,N/A,,,,,,240
+419,"Water stock (ground water, surface water) & water availability",Use,N/A,,,,,,240
+420,Soils,Use,N/A,,,,,,240
+421,Air quality,Use,"Reduction of air pollution with PM10 (-48%)
+Reduction of air pollution with PM 2,5 (-38%)",%,"Report on air quality in Slovenia in 2021, by the Slovenian Energy Agency (http://www.arso.si/zrak/kakovost%20zraka/poro%c4%8dila%20in%20publikacije/Letno_porocilo_2021_Final.pdf)",2005-12-31,2021-12-31,Letno_porocilo_2021_Final.pdf:865:55684:E75A2FF4834389E0D72BD93BC4B971EF,240
+422,Biodiversity,Production,N/A,,,,,,240
+423,"Water stock (ground water, surface water) & water availability",Production,N/A,,,,,,240
+424,Soils,Production,N/A,,,,,,240
+425,Air quality,Production,N/A,,,,,,240
+426,Biodiversity,Use,,,"Level of naturalness (subcompartment level) should be maintained or improved through forest management, not allowed to downgrade (defined in the forest act). Forest management planning (every 10 years) set the goals and control the status. Forest authority regularly controls the status during the validity of the management plan.",,,,255
+427,"Water stock (ground water, surface water) & water availability",Use,,,"Regeneration after felling is obligatory, regeneration periods are defined in the forest act and controlled by the forest authority that contribute to maintain the optimal water management characteristics of forests.",,,,255
+428,Soils,Use,,,See description under “water management” and in addition soil damages must be minimized during management activities (defined in the forest act) and recovery measures are obligatory. These are controlled by the forest authority.,,,,255
+429,Air quality,Use,,,Nor relevant.,,,,255
+430,Biodiversity,Production,,,,,,,255
+431,"Water stock (ground water, surface water) & water availability",Production,,,,,,,255
+432,Soils,Production,,,,,,,255
+433,Air quality,Production,,,,,,,255
+434,Biodiversity,Use,,,,,,,258
+435,"Water stock (ground water, surface water) & water availability",Use,,,,,,,258
+436,Soils,Use,,,,,,,258
+437,Air quality,Use,,,,,,,258
+438,Biodiversity,Production,,,,,,,258
+439,"Water stock (ground water, surface water) & water availability",Production,,,,,,,258
+440,Soils,Production,,,,,,,258
+441,Air quality,Production,,,,,,,258
+442,Biodiversity,Use,,,,,,Elements for Annex XVI - Table 5.pdf:865:55684:17C6B51AD5CE8AFD31AFE2A6727FCA63,261
+443,"Water stock (ground water, surface water) & water availability",Use,,,,,,,261
+444,Soils,Use,,,,,,,261
+445,Air quality,Use,,,,,,,261
+446,Biodiversity,Production,,,,,,,261
+447,"Water stock (ground water, surface water) & water availability",Production,,,,,,,261
+448,Soils,Production,,,,,,,261
+449,Air quality,Production,,,,,,,261
+450,Biodiversity,Use,,,,,,,264
+451,"Water stock (ground water, surface water) & water availability",Use,,,,,,,264
+452,Soils,Use,,,,,,,264
+453,Air quality,Use,,,,,,,264
+454,Biodiversity,Production,,,,,,,264
+455,"Water stock (ground water, surface water) & water availability",Production,,,,,,,264
+456,Soils,Production,,,,,,,264
+457,Air quality,Production,,,,,,,264
+458,Biodiversity,Use,,,,,,,266
+459,"Water stock (ground water, surface water) & water availability",Use,,,,,,,266
+460,Soils,Use,,,,,,,266
+461,Air quality,Use,,,,,,,266
+462,Biodiversity,Production,,,,,,,266
+463,"Water stock (ground water, surface water) & water availability",Production,,,,,,,266
+464,Soils,Production,,,,,,,266
+465,Air quality,Production,,,,,,,266
+466,Biodiversity,Use,,,,,,,269
+467,"Water stock (ground water, surface water) & water availability",Use,"The consumption of biomass has not increased in the analysed period, therefore there is no additional impact on air quality.",,,,,,269
+468,Soils,Use,,,,,,,269
+469,Air quality,Use,,,,,,,269
+470,Biodiversity,Production,"The European Commission has found that the Romanian authorities manage forests, including by authorising logging, without evaluating beforehand the impacts on protected habitats as required under the Habitats Directive and Strategic Environmental Assessment Directives. The Commission also found that protected forest habitats have been lost within protected Natura 2000 sites in breach of the Habitats and Birds Directives.",,Impact estimated by European Commission,,,,269
+471,"Water stock (ground water, surface water) & water availability",Production,,,,,,,269
+472,Soils,Production,,,,,,,269
+473,Air quality,Production,,,,,,,269
+474,Biodiversity,Use,,,,,,,272
+475,"Water stock (ground water, surface water) & water availability",Use,,,,,,,272
+476,Soils,Use,,,,,,,272
+477,Air quality,Use,,,,,,,272
+478,Biodiversity,Production,,,,,,,272
+479,"Water stock (ground water, surface water) & water availability",Production,,,,,,,272
+480,Soils,Production,,,,,,,272
+481,Air quality,Production,,,,,,,272
+482,Biodiversity,Use,nie dotyczy,nie dotyczy,"Nadzór Uznanych przez KE SystemówKZR
+
+Okres - weryfikacja KZR w trybie ciągłym",,,,276
+483,"Water stock (ground water, surface water) & water availability",Use,nie dotyczy,nie dotyczy,"Nadzór Uznanych przez KE SystemówKZR
+
+Okres - weryfikacja KZR w trybie ciągłym",,,,276
+484,Soils,Use,nie dotyczy,nie dotyczy,"Nadzór Uznanych przez KE SystemówKZR
+
+Okres - weryfikacja KZR w trybie ciągłym",,,,276
+485,Air quality,Use,nie dotyczy,nie dotyczy,"Nadzór Uznanych przez KE SystemówKZR
+
+Okres - weryfikacja KZR w trybie ciągłym",,,,276
+486,Biodiversity,Production,Brak danych dot. negatywnego wpływu wytwarzania biopaliw i biokomponentów na bioróżnorodność. stosunki wodne czy jakość gleby. Produkcja podlega rygorowi nadzoru KZR (Kryteriów Zrównoważonego Rozwoju),nie dotyczy,nie dotyczy,,,,276
+487,"Water stock (ground water, surface water) & water availability",Production,Brak danych dot. negatywnego wpływu wytwarzania biopaliw i biokomponentów na bioróżnorodność. stosunki wodne czy jakość gleby. Produkcja podlega rygorowi nadzoru KZR (Kryteriów Zrównoważonego Rozwoju),nie dotyczy,nie dotyczy,,,,276
+488,Soils,Production,Brak danych dot. negatywnego wpływu wytwarzania biopaliw i biokomponentów na bioróżnorodność. stosunki wodne czy jakość gleby. Produkcja podlega rygorowi nadzoru KZR (Kryteriów Zrównoważonego Rozwoju),nie dotyczy,nie dotyczy,,,,276
+489,Air quality,Production,Wytworzone kryteria muszą zapewniać redukcję emisji GHG względem kopalnych odpowiedników paliw godnie z wymaganiami dyrektywy RED (o odnawialnych źródłach energii w transporcie).,nie dotyczy,nie dotyczy,,,,276
+490,Biodiversity,Use,,,,,,,281
+491,"Water stock (ground water, surface water) & water availability",Use,,,,,,,281
+492,Soils,Use,,,,,,,281
+493,Air quality,Use,,,,,,,281
+494,Biodiversity,Production,not available,,,,,,281
+495,"Water stock (ground water, surface water) & water availability",Production,not available,,,,,,281
+496,Soils,Production,not available,,,,,,281
+497,Air quality,Production,not available,,,,,,281
+498,Biodiversity,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,300
+499,"Water stock (ground water, surface water) & water availability",Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,300
+500,Soils,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,300
+501,Air quality,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,300
+502,Biodiversity,Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,300
+503,"Water stock (ground water, surface water) & water availability",Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,300
+504,Soils,Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,300
+505,Air quality,Production,The criteria produced must ensure a reduction in GHG emissions relative to fossil fuel equivalents worthy of the RED (Renewable Energy for Transport) directive requirements.,not aplicable,not aplicable,,,,300
+506,Biodiversity,Use,,,,,,,303
+507,"Water stock (ground water, surface water) & water availability",Use,,,,,,,303
+508,Soils,Use,,,,,,,303
+509,Air quality,Use,,,,,,,303
+510,Biodiversity,Production,not available,,,,,,303
+511,"Water stock (ground water, surface water) & water availability",Production,not available,,,,,,303
+512,Soils,Production,not available,,,,,,303
+513,Air quality,Production,not available,,,,,,303
+514,Biodiversity,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,307
+515,"Water stock (ground water, surface water) & water availability",Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,307
+516,Soils,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,307
+517,Air quality,Use,not aplicable,not aplicable,"Supervision of EC-recognized systems KZR
+
+Period - continuous verification of the NDS",,,,307
+518,Biodiversity,Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,307
+519,"Water stock (ground water, surface water) & water availability",Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,307
+520,Soils,Production,No data is available on the negative impact of biofuel and biocomponent production on biodiversity. water relations or soil quality. Production is subject to the rigour of NDS monitoring (Sustainability Criteria),not aplicable,not aplicable,,,,307
+521,Air quality,Production,The criteria produced must ensure a reduction in GHG emissions relative to fossil fuel equivalents worthy of the RED (Renewable Energy for Transport) directive requirements.,not aplicable,not aplicable,,,,307
+522,Biodiversity,Use,no data available or incomplete,,,,,,308
+523,"Water stock (ground water, surface water) & water availability",Use,no data available or incomplete,,,,,,308
+524,Soils,Use,no data available or incomplete,,,,,,308
+525,Air quality,Use,no data available or incomplete,,,,,,308
+526,Biodiversity,Production,no production site or refinery in Luxembourg,,,,,,308
+527,"Water stock (ground water, surface water) & water availability",Production,no production site or refinery in Luxembourg,,,,,,308
+528,Soils,Production,no production site or refinery in Luxembourg,,,,,,308
+529,Air quality,Production,no production site or refinery in Luxembourg,,,,,,308
+530,Soils,Production,,,,,,,309
+531,Biodiversity,Use,,,,,,,309
+532,"Water stock (ground water, surface water) & water availability",Use,,,,,,,309
+533,Soils,Use,,,,,,,309
+534,Air quality,Use,,,,,,,309
+535,Biodiversity,Production,,,,,,,309
+536,"Water stock (ground water, surface water) & water availability",Production,,,,,,,309
+537,Air quality,Production,,,,,,,309
+538,Biodiversity,Use,,,,,,,310
+539,"Water stock (ground water, surface water) & water availability",Use,,,,,,,310
+540,Soils,Use,,,,,,,310
+541,Air quality,Use,,,,,,,310
+542,Biodiversity,Production,,,,,,,310
+543,"Water stock (ground water, surface water) & water availability",Production,,,,,,,310
+544,Soils,Production,,,,,,,310
+545,Air quality,Production,,,,,,,310
+546,Soils,Production,,,,,,,311
+547,Biodiversity,Use,,,,,,,311
+548,"Water stock (ground water, surface water) & water availability",Use,,,,,,,311
+549,Soils,Use,,,,,,,311
+550,Air quality,Use,,,,,,,311
+551,Biodiversity,Production,,,,,,,311
+552,"Water stock (ground water, surface water) & water availability",Production,,,,,,,311
+553,Air quality,Production,,,,,,,311
+554,Air quality,Production,,,,,,,315
+555,Biodiversity,Use,,,,,,,315
+556,"Water stock (ground water, surface water) & water availability",Use,,,,,,,315
+557,Soils,Use,,,,,,,315
+558,Air quality,Use,,,,,,,315
+559,Biodiversity,Production,,,,,,,315
+560,"Water stock (ground water, surface water) & water availability",Production,,,,,,,315
+561,Soils,Production,,,,,,,315
+562,Biodiversity,Use,,,,,,,324
+563,"Water stock (ground water, surface water) & water availability",Use,"The consumption of biomass has not increased in the analysed period, therefore there is no additional impact on air quality.",,,,,,324
+564,Soils,Use,,,,,,,324
+565,Air quality,Use,"According to the EEA data for PM2.5 which are main pollution that is coming from the biomass consumption, the overall PM 2.5 emissions in the period 2015-2020 are almost at the same level. Official data for PM2.5 for 2021 are not published yet. In absence of official data for 2021, our estimation is based on the consumption of the biomass according to the energy balance published by EUROSTAT. The biomass consumption in 2021 in the sectors where the biomass is used (residential, commercial and industry) has increased by 6%, so the PM2.5 will be increase by 6%. In 2020 the emissions according to EEA are 92.3 Gg and our estimation for 2021 is that PM2.5 are 98 Gg. According to the official data for concentration of all pollutants, all the values in 2020 are within the EU standards (https://www.eea.europa.eu/themes/air/country-fact-sheets/2021-country-fact-sheets/romania)""",,,,,,324
+566,Biodiversity,Production,"The European Commission has found that the Romanian authorities manage forests, including by authorising logging, without evaluating beforehand the impacts on protected habitats as required under the Habitats Directive and Strategic Environmental Assessment Directives. The Commission also found that protected forest habitats have been lost within protected Natura 2000 sites in breach of the Habitats and Birds Directives.",,"Impact estimated by European Commission
+Impact estimated by European Commission and adressed in the Letters of formal notice (Forests: Commission urges ROMANIA to stop illegal logging) https://ec.europa.eu/commission/presscorner/detail/en/inf_20_202",,,,324
+567,"Water stock (ground water, surface water) & water availability",Production,,,,,,,324
+568,Soils,Production,,,,,,,324
+569,Air quality,Production,,,,,,,324
+570,Biodiversity,Use,,,,,,,325
+571,"Water stock (ground water, surface water) & water availability",Use,,,,,,,325
+572,Soils,Use,,,,,,,325
+573,Air quality,Use,,,,,,,325
+574,Biodiversity,Production,,,,,,,325
+575,"Water stock (ground water, surface water) & water availability",Production,,,,,,,325
+576,Soils,Production,,,,,,,325
+577,Air quality,Production,,,,,,,325
+578,Biodiversity,Use,There is no available information,,,,,,332
+579,"Water stock (ground water, surface water) & water availability",Use,There is no available information,,,,,,332
+580,Soils,Use,There is no available information,,,,,,332
+581,Air quality,Use,There is no available information,,,,,,332
+582,Biodiversity,Production,There is no available information,,,,,,332
+583,"Water stock (ground water, surface water) & water availability",Production,There is no available information,,,,,,332
+584,Soils,Production,There is no available information,,,,,,332
+585,Air quality,Production,There is no available information,,,,,,332
+586,Biodiversity,Use,There is no available information,,,,,,333
+587,"Water stock (ground water, surface water) & water availability",Use,There is no available information,,,,,,333
+588,Soils,Use,There is no available information,,,,,,333
+589,Air quality,Use,There is no available information,,,,,,333
+590,Biodiversity,Production,There is no available information,,,,,,333
+591,"Water stock (ground water, surface water) & water availability",Production,There is no available information,,,,,,333
+592,Soils,Production,There is no available information,,,,,,333
+593,Air quality,Production,There is no available information,,,,,,333
