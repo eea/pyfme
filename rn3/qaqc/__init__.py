@@ -2,9 +2,10 @@
 from .quality_test import QualityTest
 from .dataset import DataSet
 from .completness import Completness
+from .comparator import Comparator
 from .read_sql import SQL_Helper
 
-__all__ = ["QualityTest", "DataSet", "Completness"]
+__all__ = ["QualityTest", "DataSet", "Completness", "Comparator"]
 
 
 def Read_SQL(servername: str, database: str, schema: str) -> DataSet:

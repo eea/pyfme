@@ -30,6 +30,8 @@ class SQL_Helper:
         dfs = {}
         dicts = self._read_dicts(schema, dict_names, connection)
 
+        df_historical = self._read_historical_release(connection=connection)
+
         for table in tables:
             query = f"SELECT * FROM {schema}.{table}"
             df = pd.read_sql(sql=query, con=connection)
@@ -41,6 +43,8 @@ class SQL_Helper:
                 if set(df[match].values).issubset(dicts[match].Id.values):
                     d = dict(zip(dicts[match].Id, dicts[match].Value))
                     df.replace({match: d}, inplace=True)
+
+            df = self._join_historical_release(df, df_historical)
             dfs[table] = df
         return dfs
 
@@ -54,6 +58,10 @@ class SQL_Helper:
             dfs_polars[table] = pl.from_pandas(df)
         return dfs_polars
 
+    def _read_historical_release(self, connection: Connection) -> pd.DataFrame:
+        query = f"SELECT Id, countryCode, ReportNet3DataflowId, releaseDate, isLatestRelease FROM metadata.ReportNet3HistoricReleases"
+        return pd.read_sql(sql=query, con=connection)
+
     def _read_dicts(
         self, schema: str, dict_names: List[str], connection: Connection
     ) -> Dict[str, pd.DataFrame]:
@@ -63,3 +71,16 @@ class SQL_Helper:
             df = pd.read_sql(sql=query, con=connection)
             dicts[d] = df
         return dicts
+
+    def _join_historical_release(
+        self, df_reported: pd.DataFrame, df_historical: pd.DataFrame
+    ) -> pd.DataFrame:
+        df = df_reported.merge(
+            df_historical,
+            left_on="ReportNet3HistoricReleaseId",
+            right_on="Id",
+            how="inner",
+        )
+        df.drop(["Id_y"], axis=1, inplace=True)
+        df.rename(columns={"Id_x": "Id"}, inplace=True)
+        return df

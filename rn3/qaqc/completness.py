@@ -46,7 +46,11 @@ class Completness(QualityTest):
         ds: pl.DataFrame = dataset.get_table(self.table_name)
         filters = []
         for k, v in self._filters.items():
-            filters.append(pl.col(k) == v)
+            if isinstance(v, list):
+                filters.append(pl.col(k).is_in(v))
+
+            else:
+                filters.append(pl.col(k) == v)
         result = ds.filter(filters).select(self.completness_columns)
         self._empty = sum(result.null_count().row(0))
         self._total = sum(result.count().row(0))
