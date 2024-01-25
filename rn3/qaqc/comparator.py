@@ -25,22 +25,23 @@ class Comparator(QualityTest):
 
     def check(self, dataset: DataSet):
         ds: pl.DataFrame = dataset.get_table(self.table_name)
-        latest = (
+        latest_ids = (
             ds.filter(pl.col("countryCode") == self._country_code)
-            # .select(["releaseDate", "ReportNet3HistoricReleaseId"])
+            .select(["releaseDate", "ReportNet3HistoricReleaseId"])
             .unique(subset="releaseDate")
             .sort("releaseDate")
             .bottom_k(self._number_of_latest, by="releaseDate")
-            # .select("Id")
-            # .to_series()
-            # .to_list()
+            .select("ReportNet3HistoricReleaseId")
+            .to_series()
+            .to_list()
         )
+        results = ds.filter(pl.col("ReportNet3HistoricReleaseId").is_in(latest_ids))
 
-        # historical_ids: List[int] = dataset.last_k_ReportNet3HistoricalReleaseId(
-        #     country_code=self._country_code, k=self._number_of_latest
-        # )
-        # ds = ds.filter(pl.col("ReportNet3HistoricReleaseId").is_in(historical_ids))
-        # found = True
+        self._results = results
+
+    @property
+    def results(self):
+        return self._results
 
     def last_k_ReportNet3HistoricalReleaseId(
         self, country_code: str, rn3_dataflow_id: int, k: int

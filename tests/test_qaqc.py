@@ -81,4 +81,6 @@ def test_apply_completness_list_filter(annexXXVI_dataset):
 def test_apply_comparator(annexXXVI_dataset):
     c1 = Comparator("annexXVI", "Table_1", "FR", 2)
     annexXXVI_dataset.apply_check(c1)
-    assert True
+
+    assert c1.results.width == 11
+    assert c1.results.height == 12
