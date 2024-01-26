@@ -23,6 +23,11 @@ def annexXXVI_dataset() -> DataSet:
 
 
 @pytest.fixture
+def pk_found() -> DataFrame:
+    return pl.read_csv("tests/data/pk_found.csv", separator=";")
+
+
+@pytest.fixture
 def questions_df() -> DataFrame:
     return pl.read_csv("tests/data/questions.csv")
 
@@ -78,9 +83,11 @@ def test_apply_completness_list_filter(annexXXVI_dataset):
     assert c1.empty == 20
 
 
-def test_apply_comparator(annexXXVI_dataset):
+def test_apply_comparator(annexXXVI_dataset, pk_found):
     c1 = Comparator("annexXVI", "Table_1", "FR", 2)
+    c1.set_pks(pks=[["Sector", "Year"]])
     annexXXVI_dataset.apply_check(c1)
 
+    c1.pivot_results(pks=[["Sector", "Year"]])
     assert c1.results.width == 11
     assert c1.results.height == 12

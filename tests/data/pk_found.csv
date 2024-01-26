@@ -1,0 +1,127 @@
+schema_name;table_name;pk_found;size
+annexII;Table_7;[('Trajectory_or_objective',)];1
+annexXVII;Table_6;[('Internet_link_to_interface_of_energy_services_providers',)];1
+annexII;Table_8;[('Reporting_Element',)];1
+annexIV;Table_2;[('Reporting_Element', 'Year')];1
+annexIV;Table_2_other_values;[('Other_indicator_ID', 'Reporting_element', 'Year')];1
+annexIV;Table_3;[('Building_type', 'Renovation_categorisation', 'Year')];1
+annexIV;Table_4;[];0
+annexIV;Table_5;[('Reporting_Element',)];1
+annexIV;Table_6;[];0
+annexIV;Table_2_other_description;[('Other_indicator_ID',)];1
+annexIV;Table_1_Comments;[('Reporting_element',)];1
+annexIV;Table_1_Elements;[('Reporting_element',), ('Reporting_element', 'Indicator')];2
+annexIV;Table_1_GDP;[('Year',), ('Reporting_element', 'Year'), ('Year', 'Unit'), ('Reporting_element', 'Year', 'Unit')];4
+annexIV;Table_1_Values;[('Reporting_element',)];1
+annexXVI;Table_1_Measures;[('Reporting_element',)];1
+annexXVI;Table_2;[('Reporting_element',)];1
+annexXVI;Table_3;[('Year',)];1
+annexXVI;Table_4;[('Reporting_element',), ('Description',), ('Reporting_element', 'Description')];3
+annexXVI;Table_4_quantitative;[];0
+annexXVI;Table_5;[('Reporting_element', 'Production_or_Use')];1
+annexXVI;Table_6;[('Reporting_element',)];1
+annexXVI;Table_7;[('Year',)];1
+annexXVI;Table_1;[('Year', 'Sector')];1
+annexI;Table_1;[('Reporting_Element',)];1
+annexI;Table_3;[('Reporting_element',)];1
+annexXVI;Table_8;[('Year', 'Reporting_element', 'source')];1
+annexI;Table_4;[];0
+annexXVII;Table_1;[('Sector', 'Year')];1
+annexII;Table_1_1;[('Reporting_Element',)];1
+annexXVII;Table_1_Other;[('Sector',), ('Year',), ('Reasons_for_growth_or_stable_FEC',), ('If_other',), ('Sector', 'Year'), ('Sector', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC'), ('Year', 'If_other'), ('Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'Year', 'If_other'), ('Sector', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC', 'If_other')];15
+annexII;Table_1_2;[('Reporting_Element',)];1
+annexII;Table_2;[('Reporting_Element',)];1
+annexII;Table_3;[('Reporting_Element',)];1
+annexXVII;Table_2;[('Reporting_element',)];1
+annexII;Table_4;[('Reporting_Element',)];1
+annexXVII;Table_3;[('Reporting_Element', 'Year')];1
+annexII;Table_5_1;[];0
+annexXVII;Table_4;[];0
+annexII;Table_5_2;[('Reporting_Element',)];1
+annexXVII;Table_5;[('Reporting_Element', 'Year')];1
+annexII;Table_6;[('Reporting_Element',)];1
+annexXVII;Table_5_Other;[('Reporting_Element',)];1
+annexII;Table_7;[('Trajectory_or_objective',)];1
+annexXVII;Table_6;[('Internet_link_to_interface_of_energy_services_providers',)];1
+annexII;Table_8;[('Reporting_Element',)];1
+annexIV;Table_2;[('Reporting_Element', 'Year')];1
+annexIV;Table_2_other_values;[('Other_indicator_ID', 'Reporting_element', 'Year')];1
+annexIV;Table_3;[('Building_type', 'Renovation_categorisation', 'Year')];1
+annexIV;Table_4;[];0
+annexIV;Table_5;[('Reporting_Element',)];1
+annexIV;Table_6;[];0
+annexIV;Table_2_other_description;[('Other_indicator_ID',)];1
+annexIV;Table_1_Comments;[('Reporting_element',)];1
+annexIV;Table_1_Elements;[('Reporting_element',), ('Reporting_element', 'Indicator')];2
+annexIV;Table_1_GDP;[('Year',), ('Reporting_element', 'Year'), ('Year', 'Unit'), ('Reporting_element', 'Year', 'Unit')];4
+annexIV;Table_1_Values;[('Reporting_element',)];1
+annexXVI;Table_1_Measures;[('Reporting_element',)];1
+annexXVI;Table_2;[('Reporting_element',)];1
+annexXVI;Table_3;[('Year',)];1
+annexXVI;Table_4;[('Reporting_element',), ('Description',), ('Reporting_element', 'Description')];3
+annexXVI;Table_4_quantitative;[];0
+annexXVI;Table_5;[('Reporting_element', 'Production_or_Use')];1
+annexXVI;Table_6;[('Reporting_element',)];1
+annexXVI;Table_7;[('Year',)];1
+annexXVI;Table_1;[('Year', 'Sector')];1
+annexI;Table_1;[('Reporting_Element',)];1
+annexI;Table_3;[('Reporting_element',)];1
+annexXVI;Table_8;[('Year', 'Reporting_element', 'source')];1
+annexI;Table_4;[];0
+annexXVII;Table_1;[('Sector', 'Year')];1
+annexII;Table_1_1;[('Reporting_Element',)];1
+annexXVII;Table_1_Other;[('Sector',), ('Year',), ('Reasons_for_growth_or_stable_FEC',), ('If_other',), ('Sector', 'Year'), ('Sector', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC'), ('Year', 'If_other'), ('Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'Year', 'If_other'), ('Sector', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC', 'If_other')];15
+annexII;Table_1_2;[('Reporting_Element',)];1
+annexII;Table_2;[('Reporting_Element',)];1
+annexII;Table_3;[('Reporting_Element',)];1
+annexXVII;Table_2;[('Reporting_element',)];1
+annexII;Table_4;[('Reporting_Element',)];1
+annexXVII;Table_3;[('Reporting_Element', 'Year')];1
+annexII;Table_5_1;[];0
+annexXVII;Table_4;[];0
+annexII;Table_5_2;[('Reporting_Element',)];1
+annexXVII;Table_5;[('Reporting_Element', 'Year')];1
+annexII;Table_6;[('Reporting_Element',)];1
+annexXVII;Table_5_Other;[('Reporting_Element',)];1
+annexII;Table_7;[('Trajectory_or_objective',)];1
+annexXVII;Table_6;[('Internet_link_to_interface_of_energy_services_providers',)];1
+annexII;Table_8;[('Reporting_Element',)];1
+annexIV;Table_2;[('Reporting_Element', 'Year')];1
+annexIV;Table_2_other_values;[('Other_indicator_ID', 'Reporting_element', 'Year')];1
+annexIV;Table_3;[('Building_type', 'Renovation_categorisation', 'Year')];1
+annexIV;Table_4;[];0
+annexIV;Table_5;[('Reporting_Element',)];1
+annexIV;Table_6;[];0
+annexIV;Table_2_other_description;[('Other_indicator_ID',)];1
+annexIV;Table_1_Comments;[('Reporting_element',)];1
+annexIV;Table_1_Elements;[('Reporting_element',), ('Reporting_element', 'Indicator')];2
+annexIV;Table_1_GDP;[('Year',), ('Reporting_element', 'Year'), ('Year', 'Unit'), ('Reporting_element', 'Year', 'Unit')];4
+annexIV;Table_1_Values;[('Reporting_element',)];1
+annexXVI;Table_1_Measures;[('Reporting_element',)];1
+annexXVI;Table_2;[('Reporting_element',)];1
+annexXVI;Table_3;[('Year',)];1
+annexXVI;Table_4;[('Reporting_element',), ('Description',), ('Reporting_element', 'Description')];3
+annexXVI;Table_4_quantitative;[];0
+annexXVI;Table_5;[('Reporting_element', 'Production_or_Use')];1
+annexXVI;Table_6;[('Reporting_element',)];1
+annexXVI;Table_7;[('Year',)];1
+annexXVI;Table_1;[('Year', 'Sector')];1
+annexI;Table_1;[('Reporting_Element',)];1
+annexI;Table_3;[('Reporting_element',)];1
+annexXVI;Table_8;[('Year', 'Reporting_element', 'source')];1
+annexI;Table_4;[];0
+annexXVII;Table_1;[('Sector', 'Year')];1
+annexII;Table_1_1;[('Reporting_Element',)];1
+annexXVII;Table_1_Other;[('Sector',), ('Year',), ('Reasons_for_growth_or_stable_FEC',), ('If_other',), ('Sector', 'Year'), ('Sector', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC'), ('Year', 'If_other'), ('Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC'), ('Sector', 'Year', 'If_other'), ('Sector', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Year', 'Reasons_for_growth_or_stable_FEC', 'If_other'), ('Sector', 'Year', 'Reasons_for_growth_or_stable_FEC', 'If_other')];15
+annexII;Table_1_2;[('Reporting_Element',)];1
+annexII;Table_2;[('Reporting_Element',)];1
+annexII;Table_3;[('Reporting_Element',)];1
+annexXVII;Table_2;[('Reporting_element',)];1
+annexII;Table_4;[('Reporting_Element',)];1
+annexXVII;Table_3;[('Reporting_Element', 'Year')];1
+annexII;Table_5_1;[];0
+annexXVII;Table_4;[];0
+annexII;Table_5_2;[('Reporting_Element',)];1
+annexXVII;Table_5;[('Reporting_Element', 'Year')];1
+annexII;Table_6;[('Reporting_Element',)];1
+annexXVII;Table_5_Other;[('Reporting_Element',)];1

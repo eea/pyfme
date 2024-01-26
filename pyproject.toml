@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "rn3"
 version = "0.0.15"
 dependencies = [
-    "numpy", "requests", "pandas", "XlsxWriter", "openpyxl", "typing-extensions", "sqlalchemy", "pyodbc"
+    "numpy", "requests", "pandas", "XlsxWriter", "openpyxl", "typing-extensions", "sqlalchemy", "pyodbc", "polars"
 ]
 
 authors = [
