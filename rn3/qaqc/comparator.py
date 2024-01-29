@@ -21,9 +21,6 @@ class Comparator(QualityTest):
     def __str__(self):
         return f"Comparator QC '{self.schema_name}.{self.table_name}'."
 
-    def set_completness_columns(self, completness_columns: List[str]) -> None:
-        self._completness_columns = completness_columns
-
     def set_pks(self, pks: List[List[str]]) -> None:
         self._pks = pks
 
@@ -43,31 +40,36 @@ class Comparator(QualityTest):
         self._results = results
 
     def pivot_results(self, pks):
-        vals = filter(
-            lambda i: i
-            not in [
-                "ReportNet3HistoricReleaseId",
-                "countryCode",
-                "ReportNet3DataflowId",
-                "releaseDate",
-                "isLatestRelease",
-            ],
-            self._results.columns,
+        variables = list(
+            filter(
+                lambda i: i
+                not in [
+                    "ReportNet3HistoricReleaseId",
+                    "countryCode",
+                    "ReportNet3DataflowId",
+                    "releaseDate",
+                    "isLatestRelease",
+                ],
+                self._results.columns,
+            )
         )
+        pivot_tables = {}
+        for variable in variables:
+            pivot_tables[variable] = self.results.pivot(
+                values=variable, index=pks[0], columns=["releaseDate"]
+            )
+        self._pivot_tables = pivot_tables
 
-    #         vals = filter(lambda i: i not in pks[0], vals)
-
-    #         self.results.pivot(
-    #             values=pks[0], index=["countryCode"], columns=["releaseDate"]
-    #         )
-    # self.results.pivot(values=["countryCode",'Guarantees_of_origin_issued'], index=pks[0], columns=["releaseDate"])
+    @property
+    def pivot_tables(self):
+        return self._pivot_tables
 
     @property
     def results(self):
         return self._results
 
     def last_k_ReportNet3HistoricalReleaseId(
-        self, country_code: str, rn3_dataflow_id: int, k: int
+        self, country_code: str, k: int
     ) -> List[int]:
         latest = (
             self._historical.filter(pl.col("countryCode") == country_code)

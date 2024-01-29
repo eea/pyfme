@@ -1,13 +1,9 @@
 import pytest
-import os
-import json
-
-# from rn3 import DataSet
-from typing import Dict
 from polars import DataFrame
 import polars as pl
 from rn3 import qaqc
-from rn3.qaqc import Completness, Comparator, DataSet
+from rn3.qaqc import Completeness, Comparator, DataSet
+from rn3.qaqc.completeness_set import CompletenessSet
 
 
 @pytest.fixture
@@ -18,7 +14,7 @@ def annexXXVI_dataset() -> DataSet:
     }
 
     hist_csv = "tests/data/historical_releases.csv"
-    ds = DataSet().from_csv_files(csv_files, hist_csv=hist_csv)
+    ds = qaqc.from_csv_files(csv_files, hist_csv=hist_csv)
     return ds
 
 
@@ -28,15 +24,16 @@ def pk_found() -> DataFrame:
 
 
 @pytest.fixture
-def questions_df() -> DataFrame:
-    return pl.read_csv("tests/data/questions.csv")
+def completeness_set() -> CompletenessSet:
+    comp_set = CompletenessSet()
+    comp_set.from_csv("tests/data/questions.csv")
+    return comp_set
 
 
 @pytest.mark.skip(reason="No access to database")
 def test_read_sql():
-    ds = qaqc.Read_SQL("onager", "NECPR", "annexXVI")
+    ds = qaqc.from_sql("onager", "NECPR", "annexXVI")
     tables = [
-        "pivoted_tables",
         "Table_1",
         "Table_1_Measures",
         "Table_2",
@@ -53,31 +50,27 @@ def test_read_sql():
     assert len(ds.tables) == len(tables)
 
 
-def test_apply_completness_single_filter(annexXXVI_dataset):
-    c1 = Completness("annexXVI", "Table_1")
+def test_apply_completeness_single_filter(annexXXVI_dataset):
+    c1 = Completeness("annexXVI", "Table_1")
     c1.add_filter("Year", 2020)
     c1.add_filter("Sector", "Electricity")
-    c1.set_completness_columns(
-        [
-            "Guarantees_of_origin_cancelled",
-            "Resulting_annual_national_RES_consumption_GWh",
-        ]
-    )
+    c1.completeness_columns = [
+        "Guarantees_of_origin_cancelled",
+        "Resulting_annual_national_RES_consumption_GWh",
+    ]
     annexXXVI_dataset.apply_check(c1)
     assert c1.total == 128
     assert c1.empty == 12
 
 
-def test_apply_completness_list_filter(annexXXVI_dataset):
-    c1 = Completness("annexXVI", "Table_1")
+def test_apply_completeness_list_filter(annexXXVI_dataset):
+    c1 = Completeness("annexXVI", "Table_1")
     c1.add_filter("Year", [2020, 2021])
     c1.add_filter("Sector", "Electricity")
-    c1.set_completness_columns(
-        [
-            "Guarantees_of_origin_cancelled",
-            "Resulting_annual_national_RES_consumption_GWh",
-        ]
-    )
+    c1.completeness_columns = [
+        "Guarantees_of_origin_cancelled",
+        "Resulting_annual_national_RES_consumption_GWh",
+    ]
     annexXXVI_dataset.apply_check(c1)
     assert c1.total == 260
     assert c1.empty == 20
@@ -91,3 +84,8 @@ def test_apply_comparator(annexXXVI_dataset, pk_found):
     c1.pivot_results(pks=[["Sector", "Year"]])
     assert c1.results.width == 11
     assert c1.results.height == 12
+
+
+def test_apply_set_completeness_checks(annexXXVI_dataset, completeness_set):
+    completeness_set.apply_checks(annexXXVI_dataset)
+    assert True

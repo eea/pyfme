@@ -1,7 +1,7 @@
 """FME Python Helper Functions"""
 from .io import Xlsx
 from .dataset import DatasetModel, DatasetReferenceData, Table, Item
-from .qaqc import QualityTest, DataSet, Completness
+from .qaqc import QualityTest, DataSet, Completeness
 
 __all__ = [
     "Xlsx",
@@ -11,5 +11,5 @@ __all__ = [
     "Table",
     "QualityTest",
     "DataSet",
-    "Completness",
+    "Completeness",
 ]

@@ -31,8 +31,10 @@ class SQL_Helper:
         dicts = self._read_dicts(schema, dict_names, connection)
 
         df_historical = self._read_historical_release(connection=connection)
-
+        exclude_list = ["pivoted_tables"]
         for table in tables:
+            if table in exclude_list:
+                continue
             query = f"SELECT * FROM {schema}.{table}"
             df = pd.read_sql(sql=query, con=connection)
 
