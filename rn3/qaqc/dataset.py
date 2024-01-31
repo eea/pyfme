@@ -14,6 +14,9 @@ class DataSet:
         return f"Dataset ({self.tables})"
 
     def set_polars(self, dataset: Dict[str, pl.DataFrame]) -> Self:
+        for name, df in dataset.items():
+            if not self._pl_df_is_str(dataset[name]):
+                dataset[name] = self._pl_df_to_str(dataset[name])
         self._dataset = dataset
         return self
 
@@ -21,11 +24,10 @@ class DataSet:
         self._dataset = dataset
         self._dataset: Dict[str, pl.DataFrame] = dict()
         for table, df in dataset.items():
-            self._dataset[table] = pl.from_pandas(df)
-        return self
-
-    def _set_dataset(self, dataset: Dict[str, pl.DataFrame]) -> Self:
-        self._dataset = dataset
+            df_pl = pl.from_pandas(df)
+            if not self._pl_df_is_str(df_pl):
+                df_pl = self._pl_df_to_str(df_pl)
+            self._dataset[table] = df_pl
         return self
 
     @property
@@ -50,3 +52,17 @@ class DataSet:
         )
         df = df.drop([""])
         return df
+
+    def to_str(self) -> None:
+        for df, name in self._dataset.items():
+            self._dataset[name] = self._pl_df_to_str(df)
+
+    def _pl_df_to_str(self, df: pl.DataFrame) -> pl.DataFrame:
+        casts = []
+        for column in df.columns:
+            casts.append(pl.col(column).cast(pl.Utf8).alias(column))
+        df = df.select(casts)
+        return df
+
+    def _pl_df_is_str(self, df: pl.DataFrame) -> bool:
+        return all([t == pl.Utf8 for t in df.dtypes])

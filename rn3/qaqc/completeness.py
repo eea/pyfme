@@ -1,6 +1,6 @@
 from .quality_test import QualityTest
 from .dataset import DataSet
-from typing import Dict, List
+from typing import Dict, List, Union
 import polars as pl
 
 
@@ -69,7 +69,7 @@ class Completeness(QualityTest):
 
     def add_filter(self, col_name: str, col_values: object) -> None:
         if col_name not in self.filters:
-            self.filters[col_name] = col_values
+            self.filters[col_name] = self._filter_to_strings(col_values)
 
     def check(self, dataset: DataSet):
         ds: pl.DataFrame = dataset.get_table(self.table_name)
@@ -77,9 +77,34 @@ class Completeness(QualityTest):
         for k, v in self._filters.items():
             if isinstance(v, list):
                 filters.append(pl.col(k).is_in(v))
-
             else:
                 filters.append(pl.col(k) == v)
-        result = ds.filter(filters).select(self.completeness_columns)
+
+        # For case insensitive matching:
+        completeness_columns = []
+        completeness_lower = [c.lower() for c in self.completeness_columns]
+        for c in ds.columns:
+            if c.lower() in completeness_lower:
+                completeness_columns.append(c)
+        if len(completeness_columns) != len(self.completeness_columns):
+            raise Warning(
+                f"Error in search pattern. The 'Columns_included': [{self._completeness_columns}] not in the table: '{self.table_name}' which has [{ds.columns}]"
+            )
+
+        if len(filters) == 0:
+            result = ds.select(completeness_columns)
+        else:
+            result = ds.filter(filters).select(completeness_columns)
+
         self._empty = sum(result.null_count().row(0))
-        self._total = sum(result.count().row(0))
+        self._total = result.shape[0] * result.shape[1]
+
+    def _filter_to_strings(self, col_value: Union[list, str]) -> Union[list, str]:
+        if isinstance(col_value, list):
+            values = [str(v) for v in col_value]
+        else:
+            values = col_value.split(",")
+            values = [str(v) for v in values]
+        if len(values) == 1:
+            return values[0]
+        return values

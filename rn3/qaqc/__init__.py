@@ -5,6 +5,7 @@ from .completeness import Completeness
 from .comparator import Comparator
 from .read_sql import SQL_Helper
 import polars as pl
+import pandas as pd
 from typing import Dict
 from typing_extensions import Optional
 
@@ -16,7 +17,7 @@ def from_sql(servername: str, database: str, schema: str) -> DataSet:
     connection = sql_helper.make_connection(servername=servername, database=database)
     dataset_data = sql_helper.read_schema_polars(schema=schema, connection=connection)
     dataset = DataSet()
-    dataset._set_dataset(dataset_data)
+    dataset.set_polars(dataset_data)
     return dataset
 
 
@@ -33,5 +34,12 @@ def from_csv_files(
             df = dataset._join_historical_release(df, df_hist)
 
         data[table] = df
-    dataset._set_dataset(data)
+    dataset.set_polars(data)
+    return dataset
+
+
+def from_xlsx(filename: str) -> DataSet:
+    data = pd.read_excel(io=filename, sheet_name=None)
+    dataset = DataSet()
+    dataset.set_pandas(data)
     return dataset
