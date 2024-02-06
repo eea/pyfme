@@ -48,8 +48,8 @@ class Comparator(QualityTest):
                     "countryCode",
                     "ReportNet3DataflowId",
                     "releaseDate",
-                    "isLatestRelease",
-                ],
+                    "isLatestRelease"
+                ] + pks[0],
                 self._results.columns,
             )
         )

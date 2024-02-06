@@ -89,7 +89,20 @@ def test_apply_completeness_single_filter(annexXXVI_dataset):
         "Resulting_annual_national_RES_consumption_GWh",
     ]
     annexXXVI_dataset.apply_check(c1)
-    assert c1.total == 128
+    assert c1.total == 140
+    assert c1.empty == 12
+
+
+def test_apply_completeness_single_filter_ignore_case(annexXXVI_dataset):
+    c1 = Completeness("annexXVI", "Table_1")
+    c1.add_filter("YeaR", "2020")
+    c1.add_filter("SectoR", "Electricity")
+    c1.completeness_columns = [
+        "GuaranteeS_of_Origin_cancelled",
+        "Resulting_ANNUAL_national_RES_consumption_GWh",
+    ]
+    annexXXVI_dataset.apply_check(c1)
+    assert c1.total == 140
     assert c1.empty == 12
 
 
@@ -102,7 +115,7 @@ def test_apply_completeness_list_filter(annexXXVI_dataset):
         "Resulting_annual_national_RES_consumption_GWh",
     ]
     annexXXVI_dataset.apply_check(c1)
-    assert c1.total == 260
+    assert c1.total == 280
     assert c1.empty == 20
 
 

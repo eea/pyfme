@@ -74,11 +74,16 @@ class Completeness(QualityTest):
     def check(self, dataset: DataSet):
         ds: pl.DataFrame = dataset.get_table(self.table_name)
         filters = []
-        for k, v in self._filters.items():
+        for column_name, v in self._filters.items():
+            #match case instensitve
+            column_name_correct_case =[c for c in ds.columns if c.lower() == column_name.lower()]
+            if len(column_name_correct_case) != 1:
+                raise ValueError(f"Completeness Test {self.code} cannot find Column {column_name} in dataset.")
+            column_name_correct_case = column_name_correct_case[0]
             if isinstance(v, list):
-                filters.append(pl.col(k).is_in(v))
+                filters.append(pl.col(column_name_correct_case).is_in(v))
             else:
-                filters.append(pl.col(k) == v)
+                filters.append(pl.col(column_name_correct_case) == v)
 
         # For case insensitive matching:
         completeness_columns = []
