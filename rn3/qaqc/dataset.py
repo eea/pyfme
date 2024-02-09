@@ -3,7 +3,7 @@ from .read_sql import SQL_Helper
 import polars as pl
 from typing import Dict, List
 from typing_extensions import Optional, Self
-
+import xlsxwriter
 
 class DataSet:
     def __init__(self):
@@ -56,6 +56,13 @@ class DataSet:
     def to_str(self) -> None:
         for df, name in self._dataset.items():
             self._dataset[name] = self._pl_df_to_str(df)
+
+    def to_excel(self, filepath) -> None:
+        with xlsxwriter.Workbook(filepath) as workbook:
+            table_names = self.tables
+            for table in table_names: 
+                df = self.get_table(table)
+                df.write_excel(worksheet=table, workbook=workbook)
 
     def _pl_df_to_str(self, df: pl.DataFrame) -> pl.DataFrame:
         casts = []

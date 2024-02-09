@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, inspect, Connection
-from typing import Dict, List
+from typing import Dict, List, Optional
 import pandas as pd
 import polars as pl
 
@@ -31,6 +31,9 @@ class SQL_Helper:
         dicts = self._read_dicts(schema, dict_names, connection)
 
         df_historical = self._read_historical_release(connection=connection)
+        if df_historical is None:
+            raise ValueError("Error finding historical release data.")
+        
         exclude_list = ["pivoted_tables"]
         for table in tables:
             if table in exclude_list:
@@ -60,9 +63,25 @@ class SQL_Helper:
             dfs_polars[table] = pl.from_pandas(df)
         return dfs_polars
 
-    def _read_historical_release(self, connection: Connection) -> pd.DataFrame:
-        query = f"SELECT Id, countryCode, ReportNet3DataflowId, releaseDate, isLatestRelease FROM metadata.ReportNet3HistoricReleases"
-        return pd.read_sql(sql=query, con=connection)
+    def _read_historical_release(self, connection: Connection) -> Optional[pd.DataFrame]:
+        schema_and_table_names = self.list_schema_and_table_names(connection=connection)            
+        if ("metadata","ReportNet3HistoricReleases") in schema_and_table_names:
+            query = f"SELECT Id, countryCode, ReportNet3DataflowId, releaseDate, isLatestRelease FROM metadata.ReportNet3HistoricReleases"
+            return pd.read_sql(sql=query, con=connection)
+        elif ("metadata","HarvestingJobs") in schema_and_table_names:
+            query = f"SELECT snapshotId, datasetName, dataProviderCode, datasetId, dateReleased FROM metadata.HarvestingJobs"
+            return pd.read_sql(sql=query, con=connection)
+        return None
+
+    def list_schema_and_table_names(self, connection: Connection) -> List[tuple]:
+        inspector = inspect(connection)
+        schemas = inspector.get_schema_names()
+        schema_table = []
+        for schema in schemas:
+             table_names = inspector.get_table_names(schema=schema)
+             for table_name in table_names:
+                schema_table.append((schema, table_name))
+        return schema_table
 
     def _read_dicts(
         self, schema: str, dict_names: List[str], connection: Connection
@@ -77,12 +96,21 @@ class SQL_Helper:
     def _join_historical_release(
         self, df_reported: pd.DataFrame, df_historical: pd.DataFrame
     ) -> pd.DataFrame:
-        df = df_reported.merge(
-            df_historical,
-            left_on="ReportNet3HistoricReleaseId",
-            right_on="Id",
-            how="inner",
-        )
-        df.drop(["Id_y"], axis=1, inplace=True)
-        df.rename(columns={"Id_x": "Id"}, inplace=True)
-        return df
+        if "ReportNet3HistoricReleaseId" in df_reported.columns:
+            df = df_reported.merge(
+                df_historical,
+                left_on="ReportNet3HistoricReleaseId",
+                right_on="Id",
+                how="inner",
+            )
+            df.drop(["Id_y"], axis=1, inplace=True)
+            df.rename(columns={"Id_x": "Id"}, inplace=True)
+            return df
+        elif "snapshotId" in df_reported.columns:
+            df = df_reported.merge(
+                df_historical,
+                left_on="snapshotId",
+                right_on="snapshotId",
+                how="inner",
+            )
+            return df
