@@ -39,7 +39,7 @@ class Comparator(QualityTest):
         results = ds.filter(pl.col("ReportNet3HistoricReleaseId").is_in(latest_ids))
         self._results = results
 
-    def pivot_results(self, pks):
+    def pivot_results(self)-> pl.DataFrame:
         variables = list(
             filter(
                 lambda i: i
@@ -48,21 +48,20 @@ class Comparator(QualityTest):
                     "countryCode",
                     "ReportNet3DataflowId",
                     "releaseDate",
-                    "isLatestRelease"
-                ] + pks[0],
+                    "isLatestRelease",
+                    "Id"
+                ] + self._pks[0],
                 self._results.columns,
             )
         )
-        pivot_tables = {}
-        for variable in variables:
-            pivot_tables[variable] = self.results.pivot(
-                values=variable, index=pks[0], columns=["releaseDate"]
-            )
-        self._pivot_tables = pivot_tables
+
+        melted = self.results.melt(id_vars=self._pks[0] + ["ReportNet3HistoricReleaseId"], value_vars= variables)
+        self._pivot_table =  melted.pivot(values= ["value"], index=self._pks[0]+["variable"], columns=["ReportNet3HistoricReleaseId"], aggregate_function="first")
+        return self._pivot_table
 
     @property
-    def pivot_tables(self):
-        return self._pivot_tables
+    def pivot_table(self):
+        return self._pivot_table
 
     @property
     def results(self):

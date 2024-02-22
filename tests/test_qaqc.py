@@ -124,9 +124,9 @@ def test_apply_comparator(annexXXVI_dataset, pk_found):
     c1.set_pks(pks=[["Sector", "Year"]])
     annexXXVI_dataset.apply_check(c1)
 
-    c1.pivot_results(pks=[["Sector", "Year"]])
-    assert c1.results.width == 11
-    assert c1.results.height == 12
+    t = c1.pivot_results()
+    assert t.width == 5
+    assert t.height == 18
 
 
 def test_apply_set_completeness_checks(annexXXVI_all_dataset, completeness_set):
