@@ -69,7 +69,6 @@ class Item:
         sql_type = ""
         if self._rn3_type in [
             "LINK",
-            "CODELIST",
             "NUMBER_INTEGER",
         ]:
             sql_type = "[int]"
@@ -79,7 +78,7 @@ class Item:
             sql_type = "[nvarchar](4000)"
         elif self._rn3_type == "TEXTAREA":
             sql_type = "[nvarchar](MAX)"
-        elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
+        elif self._rn3_type in ["URL", "CODELIST", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "[nvarchar](500)"
         elif self._rn3_type == "ATTACHMENT":
             sql_type = "[varbinary](MAX)"
