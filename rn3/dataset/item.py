@@ -105,8 +105,7 @@ class Item:
         if self._rn3_type in [
             "LINK",
             "CODELIST",
-            "NUMBER_INTEGER",
-            "URL",
+            "NUMBER_INTEGER"
         ]:
             sql_type = "Integer"
         elif self._rn3_type == "NUMBER_DECIMAL":
