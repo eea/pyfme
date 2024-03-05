@@ -71,7 +71,6 @@ class Item:
             "LINK",
             "CODELIST",
             "NUMBER_INTEGER",
-            "URL",
         ]:
             sql_type = "[int]"
         elif self._rn3_type == "NUMBER_DECIMAL":
@@ -94,7 +93,7 @@ class Item:
         sql_cmd = f"[{self._name}] {sql_type}"
 
         if self._required:
-            sql_cmd += " NOT NULL,"
+            sql_cmd += " NULL,"
         else:
             sql_cmd += " NULL,"
         return sql_cmd
@@ -103,7 +102,6 @@ class Item:
     def sqlalchemy_column(self) -> str:
         sql_type = ""
         if self._rn3_type in [
-            "LINK",
             "CODELIST",
             "NUMBER_INTEGER"
         ]:
@@ -114,7 +112,7 @@ class Item:
             sql_type = "NVARCHAR(4000)"
         elif self._rn3_type == "TEXTAREA":
             sql_type = "NVARCHAR(None)"
-        elif self._rn3_type in ["URL", "MULTISELECT_CODELIST", "EMAIL"]:
+        elif self._rn3_type in ["LINK", "URL", "MULTISELECT_CODELIST", "EMAIL"]:
             sql_type = "NVARCHAR(500)"
         elif self._rn3_type == "ATTACHMENT":
             sql_type = "LargeBinary"
